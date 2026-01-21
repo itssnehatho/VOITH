@@ -32,7 +32,7 @@ const Homepage = () => {
         </div>
         <Belief />
         <AboutUsImage />
-        <Quotes />
+        <Quotes /> 
         <AboutUs />
         <ExploreProjects />
         <Footer />
