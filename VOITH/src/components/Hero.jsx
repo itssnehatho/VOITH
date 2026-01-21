@@ -28,7 +28,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative w-full h-[calc(100vh-70px)]in-h-[580px] max-h-[calc(100vh-70px)] overflow-hidden">
+    <section ref={sectionRef} className="relative w-full h-screen overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-top bg-no-repeat"
         style={{
@@ -41,20 +41,17 @@ const Hero = () => {
       </div>
 
       <div className="relative z-10 h-full flex flex-col justify-start items-start text-left pl-4 md:pl-8 lg:pl-12 xl:pl-16 pr-8 md:pr-16 lg:pr-24 xl:pr-32 pt-72 md:pt-88 lg:pt-[28rem]">
-        <div className="max-w-4xl lg:max-w-5xl">
-          <h1 className={`font-['Times_New_Roman',serif] text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-white mb-10 md:mb-12 leading-[1.1] tracking-[-0.03em] transition-all duration-[1800ms] ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
-            }`}>
+        <div className="max-w-4xl lg:max-w-5xl relative">
+          <h1 className={`font-['Times_New_Roman',serif] text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-white mb-10 md:mb-12 leading-[1.1] tracking-[-0.03em] transition-all duration-[1800ms] ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
             {HERO_CONTENT.title}
           </h1>
-          <p className={`text-base md:text-lg lg:text-xl text-white/95 max-w-3xl lg:max-w-4xl leading-[1.85] font-light tracking-[-0.01em] transition-all duration-[1800ms] ease-out delay-[300ms] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
-            }`}>
+          <p className={`text-base md:text-lg lg:text-xl text-white/95 max-w-3xl lg:max-w-4xl leading-[1.85] font-light tracking-[-0.01em] transition-all duration-[1800ms] ease-out delay-[300ms] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
             {HERO_CONTENT.description}
           </p>
         </div>
       </div>
 
-      <div className={`absolute bottom-16 md:bottom-20 lg:bottom-24 right-4 md:right-8 lg:right-12 xl:right-16 z-20 transition-all duration-[1800ms] ease-out delay-[500ms] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
-        }`}>
+      <div className={`absolute right-4 md:right-8 lg:right-12 xl:right-16 z-20 transition-all duration-[1800ms] ease-out delay-[400ms] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`} style={{ top: '73%', transform: 'translateY(-50%)' }}>
         <a
           href="#work"
           onClick={(e) => {
@@ -72,23 +69,5 @@ const Hero = () => {
 };
 
 export default Hero; 
-
-
-
-
-
-// {/* <div className={`absolute bottom-16 md:bottom-20 lg:bottom-24 right-4 md:right-8 lg:right-12 xl:right-16 z-20 transition-all duration-[1500ms] ease-out delay-[600ms] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-//         }`}>
-//         <a
-//           href="#work"
-//           onClick={(e) => {
-//             e.preventDefault();
-//             window.location.hash = '#work';
-//           }}
-//           className="px-10 py-4 border-2 border-white/90 text-white font-semibold text-sm uppercase tracking-[0.12em] hover:bg-white hover:text-gray-900 whitespace-nowrap rounded-full transition-all duration-300 ease-out backdrop-blur-sm hover:backdrop-blur-none hover:shadow-2xl"
-//         >
-//           EXPLORE US 
-//         </a>
-//       </div> */} 
 
 

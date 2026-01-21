@@ -170,9 +170,7 @@ const AboutUsImage = () => {
 
   return (
     <section ref={sectionRef} className="w-full bg-white relative overflow-hidden" style={{ minHeight: '200vh' }}>
-      <div className={`sticky top-0 h-screen transition-opacity duration-[2000ms] ease-out ${
-        isVisible ? 'opacity-100' : 'opacity-0'
-      }`}>
+      <div className={`sticky top-0 h-screen transition-opacity duration-[2000ms] ease-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
         <div className="relative w-full h-full overflow-hidden" style={{ 
           backfaceVisibility: 'hidden',
           WebkitBackfaceVisibility: 'hidden',
@@ -188,9 +186,7 @@ const AboutUsImage = () => {
             return (
               <div
                 key={index}
-                className={`absolute ${
-                  index === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
-                }`}
+                className={`absolute ${index === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
                 style={{
                   left: 0,
                   width: `${imageWidth}%`,
@@ -224,11 +220,6 @@ const AboutUsImage = () => {
             onClick={goToPrevious}
             className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white text-gray-800 p-2 md:p-3 rounded-full transition-all duration-300 hover:scale-110 shadow-lg"
             aria-label="Previous image"
-            style={{
-              opacity: scrollX > 0.3 ? 1 : 0,
-              pointerEvents: scrollX > 0.3 ? 'auto' : 'none',
-              left: scrollX > 0.3 ? 'calc(50% - 2rem)' : '1rem'
-            }}
           >
             <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -239,34 +230,18 @@ const AboutUsImage = () => {
             onClick={goToNext}
             className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white text-gray-800 p-2 md:p-3 rounded-full transition-all duration-300 hover:scale-110 shadow-lg"
             aria-label="Next image"
-            style={{
-              opacity: scrollX > 0.3 ? 1 : 0,
-              pointerEvents: scrollX > 0.3 ? 'auto' : 'none'
-            }}
           >
             <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
 
-          <div 
-            className="absolute bottom-4 md:bottom-6 z-20 flex gap-2"
-            style={{
-              left: scrollX > 0.3 ? 'calc(50% + 50% - 50%)' : '50%',
-              transform: 'translateX(-50%)',
-              opacity: scrollX > 0.3 ? 1 : 0,
-              pointerEvents: scrollX > 0.3 ? 'auto' : 'none'
-            }}
-          >
+          <div className="absolute bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-2">
             {images.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-2 h-2 md:w-2.5 md:h-2.5 rounded-full transition-all duration-300 ${
-                  index === currentIndex
-                    ? 'bg-white w-6 md:w-8'
-                    : 'bg-white/50 hover:bg-white/75'
-                }`}
+                className={`w-2 h-2 md:w-2.5 md:h-2.5 rounded-full transition-all duration-300 ${index === currentIndex ? 'bg-white w-6 md:w-8' : 'bg-white/50 hover:bg-white/75'}`}
                 aria-label={`Slide ${index + 1}`}
               />
             ))}

@@ -39,9 +39,7 @@ const Quotes = () => {
   return (
     <section ref={sectionRef} className="w-full bg-gradient-to-b from-white via-[#fafafa] to-white py-20 md:py-24 lg:py-28 -mt-[100vh]">
       <div className="max-w-5xl mx-auto px-8 md:px-12 lg:px-16">
-        <div className={`space-y-16 md:space-y-20 transition-all duration-[1800ms] ease-out ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-        }`}>
+        <div className={`space-y-16 md:space-y-20 transition-all duration-[1800ms] ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           {quotes.map((quote, index) => (
             <div key={index} className="text-center" style={{ transitionDelay: `${index * 250}ms` }}>
               <div className="flex justify-center mb-8 md:mb-10">

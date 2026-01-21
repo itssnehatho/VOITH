@@ -6,6 +6,7 @@ const Header = () => {
   const [isDesktopMenuOpen, setIsDesktopMenuOpen] = useState(false);
   const [projectsVisible, setProjectsVisible] = useState(false);
   const [isWorkPage, setIsWorkPage] = useState(false);
+  const [isGalleryPage, setIsGalleryPage] = useState(false);
 
   const projects = [
     { 
@@ -31,6 +32,7 @@ const Header = () => {
   useEffect(() => {
     const checkHash = () => {
       setIsWorkPage(window.location.hash === '#work');
+      setIsGalleryPage(window.location.hash === '#gallery');
     };
     
     checkHash();
@@ -70,19 +72,22 @@ const Header = () => {
     }, 500);
   };
 
-  const textColorClass = isWorkPage ? 'text-gray-800' : 'text-white';
-  const iconColorClass = isWorkPage ? 'text-gray-800' : 'text-white';
+  const textColorClass = (isWorkPage || isGalleryPage) ? 'text-gray-800' : 'text-white';
+  const iconColorClass = (isWorkPage || isGalleryPage) ? 'text-gray-800' : 'text-white';
 
   return (
     <header className="w-full bg-transparent absolute top-0 left-0 z-[70]">
       <div className="w-full mx-auto px-8 md:px-12 lg:px-16 pt-8 md:pt-10 lg:pt-12 pb-4 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center">
+        <div className="flex items-center gap-3 md:gap-4">
           <img 
             src="/voithlogo.png" 
             alt="VOITH" 
             className="h-12 w-auto object-contain"
           />
+          <p className={`hidden sm:block text-sm md:text-base font-light tracking-wide ${textColorClass}`}>
+            Vaidya's Organization of Industry & Trading Houses
+          </p>
         </div> 
         
         {/* Desktop Navigation */}
@@ -92,14 +97,11 @@ const Header = () => {
               key={item.label}
               href={item.href}
               onClick={(e) => {
-                // For hash links, prevent default scroll and let hashchange handle routing
                 if (item.href.startsWith('#')) {
                   e.preventDefault();
                   if (item.href === '#home') {
-                    // Clear hash to go to homepage
                     window.location.hash = '';
                   } else {
-                    // Set hash which will trigger hashchange event
                     window.location.hash = item.href;
                   }
                 }
@@ -109,7 +111,6 @@ const Header = () => {
               {item.label}
             </a>
           ))}
-          {/* Hamburger Menu Icon after Contact */}
           <button 
             className={`${iconColorClass} ml-4 relative z-[70]`} 
             aria-label="Toggle projects menu"
@@ -174,7 +175,6 @@ const Header = () => {
                 key={item.label}
                 href={item.href}
                 onClick={(e) => {
-                  // For hash links, prevent default scroll and let hashchange handle routing
                   if (item.href.startsWith('#')) {
                     e.preventDefault();
                     if (item.href === '#home') {
@@ -190,7 +190,6 @@ const Header = () => {
                 {item.label}
               </a>
             ))}
-            {/* Projects in Mobile Menu */}
             <div className="pt-6 border-t border-white/20 w-full">
               <p className="text-white/60 text-xs uppercase tracking-[0.2em] mb-4 text-center">PROJECTS</p>
               {projects.map((project, index) => (
@@ -212,7 +211,6 @@ const Header = () => {
         </div>
       )}
 
-      {/* Full Screen Desktop Projects Menu */}
       {isDesktopMenuOpen && (
         <>
           <div 
@@ -221,7 +219,6 @@ const Header = () => {
           ></div>
           <div className="fixed inset-0 z-[60] overflow-y-auto pointer-events-none">
             <div className="min-h-screen flex flex-col pointer-events-auto">
-              {/* Projects Grid */}
               <div className="flex-1 flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 pt-8 md:pt-12 lg:pt-16 pb-12 md:pb-16 lg:pb-20">
                 <div className="max-w-7xl w-full">
                   <h2 className={`font-['Times_New_Roman',serif] text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-white mb-12 md:mb-16 lg:mb-20 text-center tracking-[-0.02em] uppercase transition-all duration-1000 ease-out ${

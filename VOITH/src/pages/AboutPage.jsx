@@ -111,7 +111,7 @@ const AboutPage = () => {
       <section className="w-full bg-[#faf9f7] py-16 sm:py-20 md:py-24 lg:py-32 xl:py-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 md:gap-12 lg:gap-16 items-start">
-            {/* Left Side - Small Images */}
+            {/* Left Side Images */}
             <div className="md:col-span-1 lg:col-span-3 space-y-6 sm:space-y-8" ref={leftImagesRef}>
               <div className={`relative w-full aspect-square overflow-hidden group transition-all duration-[1500ms] ease-out ${
                 leftImagesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-6'
@@ -145,7 +145,7 @@ const AboutPage = () => {
               </div>
             </div>
 
-            {/* Center - Main Text */}
+            {/* Center  Text */}
             <div className="md:col-span-1 lg:col-span-6 flex flex-col justify-center mt-8 md:mt-0">
               <h2 className="font-['Times_New_Roman',serif] text-xs sm:text-xs md:text-sm font-normal text-gray-500 mb-8 sm:mb-10 md:mb-12 tracking-[0.2em] uppercase">
                 • ABOUT US
@@ -160,7 +160,7 @@ const AboutPage = () => {
               </p>
             </div>
 
-            {/* Right Side - Vertical Image */}
+            {/* Right Side Image */}
             <div className="md:col-span-2 lg:col-span-3 mt-8 md:mt-0" ref={rightImageRef}>
               <div className={`relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[650px] xl:h-[750px] overflow-hidden group transition-all duration-1000 ease-out ${
                 isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
@@ -188,7 +188,7 @@ const AboutPage = () => {
               </h2>
             </div>
 
-            {/* Content on the right - stacked vertically */}
+            {/* Content vertically */}
             <div className="md:w-2/3 lg:w-1/2 md:ml-auto">
               <div className="space-y-10 sm:space-y-12 md:space-y-14 lg:space-y-16">
                 {/* Vision */}
@@ -240,7 +240,7 @@ const AboutPage = () => {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 xl:gap-20">
-            {/* Left Card - Residential Projects */}
+            {/* Residential Projects */}
             <div className="group cursor-pointer">
               <div className="relative w-full h-[350px] sm:h-[400px] md:h-[500px] lg:h-[550px] xl:h-[600px] overflow-hidden mb-4 sm:mb-6">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
@@ -255,7 +255,7 @@ const AboutPage = () => {
               </p>
             </div>
 
-            {/* Right Card - Other Projects */}
+            {/* Other Projects */}
             <div className="group cursor-pointer">
               <div className="relative w-full h-[350px] sm:h-[400px] md:h-[500px] lg:h-[550px] xl:h-[600px] overflow-hidden mb-4 sm:mb-6">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>

@@ -3,7 +3,7 @@ import Homepage from './pages/Homepage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import OurWorkPage from './pages/OurWorkPage';
-import './App.css';
+import GalleryPage from './pages/GalleryPage';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -18,6 +18,8 @@ function App() {
         setCurrentPage('contact');
       } else if (hash === '#work') {
         setCurrentPage('work');
+      } else if (hash === '#gallery') {
+        setCurrentPage('gallery');
       } else {
         setCurrentPage('home');
       }
@@ -39,6 +41,7 @@ function App() {
       {currentPage === 'about' ? <AboutPage /> : 
        currentPage === 'contact' ? <ContactPage /> : 
        currentPage === 'work' ? <OurWorkPage /> :
+       currentPage === 'gallery' ? <GalleryPage /> :
        <Homepage />}
     </>
   );

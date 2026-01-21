@@ -38,24 +38,16 @@ const ExploreProjects = () => {
   return (
     <section ref={sectionRef} className="w-full bg-gradient-to-b from-gray-50 to-white py-24 md:py-28 lg:py-32">
       <div className="max-w-7xl mx-auto px-8 md:px-12 lg:px-16">
-        <h2 className={`font-['Times_New_Roman',serif] text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-gray-900 tracking-[-0.03em] uppercase mb-20 md:mb-24 lg:mb-28 transition-all duration-[1800ms] ease-out ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
-        }`}>
-          <span className={`inline-block transition-all duration-[1500ms] ease-out delay-[100ms] hover:text-gray-700 ${
-            isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-6'
-          }`}>EXPLORE</span>{' '}
-          <span className={`inline-block transition-all duration-[1500ms] ease-out delay-[300ms] hover:text-gray-700 ${
-            isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-6'
-          }`}>PROJECTS</span>
+        <h2 className={`font-['Times_New_Roman',serif] text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-gray-900 tracking-[-0.03em] uppercase mb-20 md:mb-24 lg:mb-28 transition-all duration-[1800ms] ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+          <span className={`inline-block transition-all duration-[1500ms] ease-out delay-[100ms] hover:text-gray-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-6'}`}>EXPLORE</span>{' '}
+          <span className={`inline-block transition-all duration-[1500ms] ease-out delay-[300ms] hover:text-gray-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-6'}`}>PROJECTS</span>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 lg:gap-18">
           {projects.map((project, index) => (
             <div
               key={index}
-              className={`group transition-all duration-[1500ms] ease-out ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-              }`}
+              className={`group transition-all duration-[1500ms] ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
               style={{ transitionDelay: `${(index + 1) * 250}ms` }}
             >
               <div className="relative w-full h-[450px] md:h-[550px] lg:h-[650px] overflow-hidden mb-8">

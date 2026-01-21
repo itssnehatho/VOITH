@@ -29,9 +29,7 @@ const Belief = () => {
     <section ref={sectionRef} className="w-full bg-gradient-to-b from-white via-[#fafafa] to-white min-h-screen flex items-center justify-center py-24 md:py-28 lg:py-32">
       <div className="max-w-5xl mx-auto px-8 md:px-12 lg:px-16 text-center">
         <div className="flex justify-center mb-16 md:mb-20 lg:mb-24">
-          <div className={`flex items-center justify-center transition-all duration-[1800ms] ease-out ${
-            isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
-          }`}>
+          <div className={`flex items-center justify-center transition-all duration-[1800ms] ease-out ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
             <img 
               src="/voithlogo.png" 
               alt="VOITH" 
@@ -40,9 +38,7 @@ const Belief = () => {
           </div>
         </div>
         
-        <p className={`text-sm md:text-base lg:text-lg xl:text-xl text-gray-700 leading-[1.9] max-w-4xl mx-auto uppercase tracking-[0.08em] font-light transition-all duration-[1800ms] ease-out delay-[300ms] ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
-        }`}>
+        <p className={`text-sm md:text-base lg:text-lg xl:text-xl text-gray-700 leading-[1.9] max-w-4xl mx-auto uppercase tracking-[0.08em] font-light transition-all duration-[1800ms] ease-out delay-[300ms] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
           {BELIEF_TEXT}
         </p>
       </div>

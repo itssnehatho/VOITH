@@ -24,8 +24,12 @@ const Homepage = () => {
     <div className="min-h-screen bg-white overflow-hidden relative">
       <div className="relative">
         <Header />
-        <Hero />
-        <FeaturedIn />
+        <div className="relative w-full h-screen">
+          <Hero />
+          <div className="absolute bottom-0 left-0 right-0 z-30">
+            <FeaturedIn />
+          </div>
+        </div>
         <Belief />
         <AboutUsImage />
         <Quotes />
