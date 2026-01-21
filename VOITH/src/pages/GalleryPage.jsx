@@ -66,7 +66,7 @@ const GalleryPage = () => {
       <section className="relative w-full pt-24 sm:pt-28 md:pt-32 lg:pt-40 pb-16 sm:pb-20 md:pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           <h1 ref={titleRef} className={`font-['Times_New_Roman',serif] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light text-gray-900 tracking-tight transition-all duration-[1500ms] ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-            GALLARY
+            GALLERY
           </h1>
         </div>
       </section>
