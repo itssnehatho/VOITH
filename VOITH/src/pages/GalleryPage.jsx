@@ -129,7 +129,7 @@ const GalleryPage = () => {
                     />
                   </div>
                   <p className="font-['Times_New_Roman',serif] text-base sm:text-lg md:text-xl font-light text-gray-900 tracking-tight uppercase text-center">
-                    VIEW MEDIA
+                    VIEW MEDIA 
                   </p>
                 </div>
               ))}
