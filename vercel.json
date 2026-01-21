@@ -1,0 +1,11 @@
+{
+  "buildCommand": "cd VOITH && npm install && npm run build",
+  "outputDirectory": "VOITH/dist",
+  "installCommand": "cd VOITH && npm install",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
