@@ -1,7 +1,8 @@
 {
-  "buildCommand": "cd VOITH && npm install && npm run build",
+  "buildCommand": "cd VOITH && npm ci && npm run build",
   "outputDirectory": "VOITH/dist",
-  "installCommand": "cd VOITH && npm install",
+  "installCommand": "cd VOITH && npm ci",
+  "framework": null,
   "rewrites": [
     {
       "source": "/(.*)",
