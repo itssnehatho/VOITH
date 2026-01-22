@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { NAVIGATION_ITEMS } from '../constants';
 
 const Header = () => {

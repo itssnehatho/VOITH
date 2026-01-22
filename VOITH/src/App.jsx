@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Homepage from './pages/Homepage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
@@ -9,26 +9,18 @@ function App() {
   const [currentPage, setCurrentPage] = useState('home');
 
   useEffect(() => {
-    // Check URL hash on mount and when hash changes
     const handleHashChange = () => {
       const hash = window.location.hash;
-      if (hash === '#about') {
-        setCurrentPage('about');
-      } else if (hash === '#contact') {
-        setCurrentPage('contact');
-      } else if (hash === '#work') {
-        setCurrentPage('work');
-      } else if (hash === '#gallery') {
-        setCurrentPage('gallery');
-      } else {
-        setCurrentPage('home');
-      }
+      const pageMap = {
+        '#about': 'about',
+        '#contact': 'contact',
+        '#work': 'work',
+        '#gallery': 'gallery'
+      };
+      setCurrentPage(pageMap[hash] || 'home');
     };
 
-    // Check initial hash
     handleHashChange();
-
-    // Listen for hash changes
     window.addEventListener('hashchange', handleHashChange);
 
     return () => {
@@ -36,15 +28,22 @@ function App() {
     };
   }, []); 
 
-  return (
-    <>
-      {currentPage === 'about' ? <AboutPage /> : 
-       currentPage === 'contact' ? <ContactPage /> : 
-       currentPage === 'work' ? <OurWorkPage /> :
-       currentPage === 'gallery' ? <GalleryPage /> :
-       <Homepage />}
-    </>
-  );
+  const renderPage = () => {
+    switch (currentPage) {
+      case 'about':
+        return <AboutPage />;
+      case 'contact':
+        return <ContactPage />;
+      case 'work':
+        return <OurWorkPage />;
+      case 'gallery':
+        return <GalleryPage />;
+      default:
+        return <Homepage />;
+    }
+  };
+
+  return <>{renderPage()}</>;
 }
 
 export default App;
