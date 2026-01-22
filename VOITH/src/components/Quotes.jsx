@@ -37,7 +37,7 @@ const Quotes = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="w-full bg-gradient-to-b from-white via-[#fafafa] to-white py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28 -mt-[100vh]">
+    <section ref={sectionRef} className="w-full bg-gradient-to-b from-white via-[#fafafa] to-white py-20 sm:py-24 md:py-28 lg:py-32 xl:py-40 -mt-[100vh]">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         <div className={`space-y-10 sm:space-y-12 md:space-y-14 lg:space-y-16 xl:space-y-20 transition-all duration-[1800ms] ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           {quotes.map((quote, index) => (
