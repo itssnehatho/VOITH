@@ -42,17 +42,17 @@ const Hero = () => {
 
       <div className="relative z-10 h-full flex flex-col justify-center items-start text-left pl-4 sm:pl-6 md:pl-8 lg:pl-12 xl:pl-16 pr-4 sm:pr-6 md:pr-16 lg:pr-24 xl:pr-32 pt-16 sm:pt-20 md:pt-24 lg:pt-32 xl:pt-40">
         <div className="max-w-4xl lg:max-w-5xl relative w-full">
-          {/* Headline - Primary Typography */}
+          {/* Headline  */}
           <h1 className={`font-['Times_New_Roman',serif] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-white mb-6 sm:mb-7 md:mb-8 lg:mb-10 leading-[1.1] tracking-[-0.03em] transition-all duration-[1800ms] ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
             {HERO_CONTENT.title}
           </h1>
           
-          {/* Subheadline/Body - Secondary Typography */}
+          {/* Subheadline/Body  */}
           <p className={`text-sm sm:text-base md:text-lg lg:text-xl text-white/95 max-w-3xl lg:max-w-4xl leading-[1.75] sm:leading-[1.85] font-light tracking-[-0.01em] transition-all duration-[1800ms] ease-out delay-[300ms] mb-8 sm:mb-10 md:mb-12 lg:mb-14 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
             {HERO_CONTENT.description}
           </p>
           
-          {/* CTA Button - Tertiary Typography */}
+          {/* CTA Button  */}
           <div className={`transition-all duration-[1800ms] ease-out delay-[400ms] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
             <a
               href="#work"

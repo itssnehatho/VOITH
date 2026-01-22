@@ -102,11 +102,11 @@ const ContactPage = () => {
         </div>
       </section>
 
-      {/* Contact Information Section */}
+      {/* Contact Info Section */}
       <section ref={contactRef} className="w-full bg-gradient-to-b from-white to-[#fafafa] py-16 sm:py-20 md:py-24 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-14 md:gap-16 lg:gap-20">
-            {/* Left Column - Headings */}
+            {/* Left Headings */}
             <div className={`space-y-12 sm:space-y-14 md:space-y-16 transition-all duration-[1500ms] ease-out ${
               contactVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-6'
             }`}>
@@ -130,7 +130,7 @@ const ContactPage = () => {
               </div>
             </div>
 
-            {/* Right Column - Contact Details */}
+            {/* Contact Details */}
             <div className={`space-y-12 sm:space-y-14 md:space-y-16 transition-all duration-[1500ms] ease-out delay-[200ms] ${
               contactVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-6'
             }`}>
@@ -184,7 +184,7 @@ const ContactPage = () => {
         </div>
       </section>
 
-      {/* Right-aligned Content Section */}
+      {/* Right-aligned Content  */}
       <section ref={companiesRef} className="w-full bg-white py-16 sm:py-20 md:py-24 lg:py-28 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           <div className="flex justify-start md:justify-end">

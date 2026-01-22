@@ -206,7 +206,7 @@ const AboutUsImage = () => {
         ))}
       </div>
 
-      {/* Desktop Layout: Original sticky overlay design */}
+      {/* Desktop Layout */}
       <div className="hidden md:block relative" style={{ minHeight: '200vh' }}>
         <div className={`sticky top-0 h-screen transition-opacity duration-[2000ms] ease-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
           <div className="relative w-full h-full overflow-hidden" style={{ 
