@@ -37,25 +37,25 @@ const Quotes = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="w-full bg-gradient-to-b from-white via-[#fafafa] to-white py-20 md:py-24 lg:py-28 -mt-[100vh]">
-      <div className="max-w-5xl mx-auto px-8 md:px-12 lg:px-16">
-        <div className={`space-y-16 md:space-y-20 transition-all duration-[1800ms] ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+    <section ref={sectionRef} className="w-full bg-gradient-to-b from-white via-[#fafafa] to-white py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28 -mt-[100vh]">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+        <div className={`space-y-10 sm:space-y-12 md:space-y-14 lg:space-y-16 xl:space-y-20 transition-all duration-[1800ms] ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           {quotes.map((quote, index) => (
             <div key={index} className="text-center" style={{ transitionDelay: `${index * 250}ms` }}>
-              <div className="flex justify-center mb-8 md:mb-10">
-                <svg className="w-12 h-12 md:w-14 md:h-14 text-gray-200" fill="currentColor" viewBox="0 0 24 24">
+              <div className="flex justify-center mb-5 sm:mb-6 md:mb-8 lg:mb-10">
+                <svg className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 text-gray-200" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.996 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-10z"/>
                 </svg>
               </div>
-              <blockquote className="font-['Times_New_Roman',serif] text-2xl md:text-3xl lg:text-4xl text-gray-800 leading-[1.65] font-light italic mb-8 md:mb-10">
+              <blockquote className="font-['Times_New_Roman',serif] text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-gray-800 leading-[1.55] sm:leading-[1.6] md:leading-[1.65] font-light italic mb-5 sm:mb-6 md:mb-8 lg:mb-10 px-3 sm:px-4 md:px-2">
                 {quote.text}
               </blockquote>
-              <div className="flex items-center justify-center gap-4">
-                <div className="w-16 h-px bg-gray-200"></div>
-                <p className="text-xs md:text-sm text-gray-500 font-light tracking-[0.2em] uppercase">
+              <div className="flex items-center justify-center gap-2.5 sm:gap-3 md:gap-4">
+                <div className="w-10 sm:w-12 md:w-16 h-px bg-gray-200"></div>
+                <p className="text-[9px] sm:text-[10px] md:text-xs lg:text-sm text-gray-500 font-light tracking-[0.15em] sm:tracking-[0.2em] uppercase">
                   {quote.author}
                 </p>
-                <div className="w-16 h-px bg-gray-200"></div>
+                <div className="w-10 sm:w-12 md:w-16 h-px bg-gray-200"></div>
               </div>
             </div>
           ))}

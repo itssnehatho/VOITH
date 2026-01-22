@@ -77,21 +77,21 @@ const Header = () => {
 
   return (
     <header className="w-full bg-transparent absolute top-0 left-0 z-[70]">
-      <div className="w-full mx-auto px-8 md:px-12 lg:px-16 pt-8 md:pt-10 lg:pt-12 pb-4 flex items-center justify-between">
+      <div className="w-full mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 pt-6 sm:pt-7 md:pt-8 lg:pt-10 xl:pt-12 pb-3 sm:pb-3.5 md:pb-4 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center gap-3 md:gap-4">
+        <div className="flex items-center gap-2 sm:gap-2.5 md:gap-3 lg:gap-4">
           <img 
             src="/voithlogo.png" 
             alt="VOITH" 
-            className="h-12 w-auto object-contain"
+            className="h-10 sm:h-11 md:h-12 w-auto object-contain"
           />
-          <p className={`hidden sm:block text-sm md:text-base font-light tracking-wide ${textColorClass}`}>
+          <p className={`hidden lg:block text-xs md:text-sm lg:text-base font-light tracking-wide ${textColorClass}`}>
             Vaidya's Organization of Industry & Trading Houses
           </p>
         </div> 
         
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8 lg:space-x-10">
+        <nav className="hidden md:flex items-center space-x-6 lg:space-x-8 xl:space-x-10">
           {NAVIGATION_ITEMS.map((item) => (
             <a 
               key={item.label}
@@ -106,18 +106,18 @@ const Header = () => {
                   }
                 }
               }}
-              className={`${textColorClass} font-semibold text-sm lg:text-[15px] hover:text-red-600 transition-colors uppercase tracking-[0.1em] leading-tight`}
+              className={`${textColorClass} font-semibold text-xs md:text-sm lg:text-[15px] hover:text-red-600 transition-colors uppercase tracking-[0.1em] leading-tight`}
             >
               {item.label}
             </a>
           ))}
           <button 
-            className={`${iconColorClass} ml-4 relative z-[70]`} 
+            className={`${iconColorClass} ml-2 md:ml-4 relative z-[70]`} 
             aria-label="Toggle projects menu"
             onClick={toggleDesktopMenu}
           >
             {isDesktopMenuOpen ? (
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path 
                   strokeLinecap="round" 
                   strokeLinejoin="round" 
@@ -126,7 +126,7 @@ const Header = () => {
                 />
               </svg>
             ) : (
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path 
                   strokeLinecap="round" 
                   strokeLinejoin="round" 
@@ -168,8 +168,8 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 bg-black bg-opacity-95 z-40 pt-20">
-          <nav className="flex flex-col items-center space-y-6 px-8">
+        <div className="md:hidden fixed inset-0 bg-black bg-opacity-95 z-40 pt-16 sm:pt-20">
+          <nav className="flex flex-col items-center space-y-4 sm:space-y-5 md:space-y-6 px-4 sm:px-6 md:px-8 pt-4">
             {NAVIGATION_ITEMS.map((item) => (
               <a 
                 key={item.label}
@@ -185,13 +185,13 @@ const Header = () => {
                   }
                   closeMobileMenu();
                 }}
-                className="text-white font-semibold text-lg hover:text-red-600 transition-colors uppercase tracking-[0.1em]"
+                className="text-white font-semibold text-base sm:text-lg hover:text-red-600 transition-colors uppercase tracking-[0.1em] text-center"
               >
                 {item.label}
               </a>
             ))}
-            <div className="pt-6 border-t border-white/20 w-full">
-              <p className="text-white/60 text-xs uppercase tracking-[0.2em] mb-4 text-center">PROJECTS</p>
+            <div className="pt-4 sm:pt-6 border-t border-white/20 w-full max-w-xs sm:max-w-md">
+              <p className="text-white/60 text-[10px] sm:text-xs uppercase tracking-[0.2em] mb-3 sm:mb-4 text-center">PROJECTS</p>
               {projects.map((project, index) => (
                 <a
                   key={index}
@@ -201,7 +201,7 @@ const Header = () => {
                     window.location.hash = project.href;
                     closeMobileMenu();
                   }}
-                  className="block text-white/80 font-light text-base hover:text-white hover:text-red-600 transition-colors uppercase tracking-[0.1em] py-2 text-center"
+                  className="block text-white/80 font-light text-sm sm:text-base hover:text-white hover:text-red-600 transition-colors uppercase tracking-[0.1em] py-1.5 sm:py-2 text-center"
                 >
                   {project.title}
                 </a>

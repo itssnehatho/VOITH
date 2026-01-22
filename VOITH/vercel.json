@@ -1,6 +1,4 @@
 {
-  "buildCommand": "cd VOITH && npm run build",
-  "outputDirectory": "VOITH/dist",
   "rewrites": [
     {
       "source": "/(.*)",

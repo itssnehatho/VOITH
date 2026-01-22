@@ -250,14 +250,14 @@ const AboutUsImage = () => {
       </div>
 
       <div 
-        className="absolute left-0 top-0 w-1/2 min-h-[200vh] z-30 pointer-events-none"
+        className="absolute left-0 top-0 w-full md:w-1/2 min-h-[200vh] z-30 pointer-events-none"
         style={{
           opacity: scrollX > 0.15 ? Math.min(1, (scrollX - 0.15) / 0.25) : 0,
           transform: `translateX(${scrollX > 0.15 ? 0 : -30 * (1 - scrollX / 0.15)}px)`,
           willChange: 'opacity, transform'
         }}
       >
-        <div className="sticky top-0 h-screen flex flex-col justify-center px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 pointer-events-auto">
+        <div className="sticky top-0 h-screen flex flex-col justify-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 pt-20 sm:pt-24 md:pt-0 pb-20 sm:pb-24 md:pb-0 pointer-events-auto">
           <div className="mb-8 sm:mb-10 md:mb-12">
             <h2 className="font-['Times_New_Roman',serif] text-xs sm:text-sm md:text-base font-light text-gray-400 mb-3 tracking-[0.25em] uppercase">
               <AnimatedText 
