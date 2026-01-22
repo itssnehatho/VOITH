@@ -17,7 +17,7 @@ const Belief = () => {
           observer.unobserve(sectionRef.current);
         }
       },
-      { threshold: 0.15, rootMargin: '0px 0px -100px 0px' }
+      { threshold: 0.2, rootMargin: '0px 0px -80px 0px' }
     );
 
     observer.observe(sectionRef.current);
@@ -29,7 +29,7 @@ const Belief = () => {
     <section ref={sectionRef} className="w-full bg-gradient-to-b from-white via-[#fafafa] to-white min-h-screen flex items-center justify-center py-20 sm:py-24 md:py-28 lg:py-32 xl:py-40">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 text-center">
         <div className="flex justify-center mb-12 sm:mb-14 md:mb-16 lg:mb-20 xl:mb-24">
-          <div className={`flex items-center justify-center transition-all duration-[1800ms] ease-out ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
+          <div className={`flex items-center justify-center transition-all duration-[2000ms] ease-out ${isVisible ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 translate-y-8'}`}>
             <img 
               src="/voithlogo.png" 
               alt="VOITH" 

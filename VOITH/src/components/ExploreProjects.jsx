@@ -2,8 +2,11 @@ import { useEffect, useState, useRef } from 'react';
 
 const ExploreProjects = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [imageVisibilities, setImageVisibilities] = useState({});
   const sectionRef = useRef(null);
+  const imageRefs = useRef([]);
   const done = useRef(false);
+  const imageAnimatedRefs = useRef({});
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -20,6 +23,32 @@ const ExploreProjects = () => {
     if (sectionRef.current) observer.observe(sectionRef.current);
 
     return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const imageObservers = imageRefs.current.map((ref, index) => {
+      if (!ref) return null;
+
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting && !imageAnimatedRefs.current[index]) {
+            imageAnimatedRefs.current[index] = true;
+            setImageVisibilities(prev => ({ ...prev, [index]: true }));
+            observer.unobserve(ref);
+          }
+        },
+        { threshold: 0.2, rootMargin: '0px 0px -80px 0px' }
+      );
+
+      observer.observe(ref);
+      return observer;
+    });
+
+    return () => {
+      imageObservers.forEach(observer => {
+        if (observer) observer.disconnect();
+      });
+    };
   }, []);
 
   const projects = [
@@ -50,7 +79,10 @@ const ExploreProjects = () => {
               className={`group transition-all duration-[1500ms] ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
               style={{ transitionDelay: `${(index + 1) * 250}ms` }}
             >
-              <div className="relative w-full h-[350px] sm:h-[400px] md:h-[450px] lg:h-[550px] xl:h-[650px] overflow-hidden mb-6 sm:mb-8">
+              <div 
+                ref={el => imageRefs.current[index] = el}
+                className={`relative w-full h-[350px] sm:h-[400px] md:h-[450px] lg:h-[550px] xl:h-[650px] overflow-hidden mb-6 sm:mb-8 transition-all duration-[2200ms] ease-out ${imageVisibilities[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+              >
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10"></div>
                 <img 
                   src={project.image} 

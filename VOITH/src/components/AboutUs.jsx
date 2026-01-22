@@ -4,8 +4,11 @@ import { ABOUT_US_CONTENT } from '../constants';
 const AboutUs = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [imageVisible, setImageVisible] = useState(false);
   const sectionRef = useRef(null);
+  const imageRef = useRef(null);
   const hasAnimated = useRef(false);
+  const imageHasAnimated = useRef(false);
   const autoPlayRef = useRef(null);
 
   const images = ['/home2.png', '/homepage.jpg', '/home2.png', '/homepage.jpg'];
@@ -27,6 +30,26 @@ const AboutUs = () => {
 
     return () => {
       if (el) observer.unobserve(el);
+    };
+  }, []);
+
+  useEffect(() => {
+    const imageObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !imageHasAnimated.current) {
+          imageHasAnimated.current = true;
+          setImageVisible(true);
+          imageObserver.unobserve(imageRef.current);
+        }
+      },
+      { threshold: 0.2, rootMargin: '0px 0px -60px 0px' }
+    );
+
+    const el = imageRef.current;
+    if (el) imageObserver.observe(el);
+
+    return () => {
+      if (el) imageObserver.unobserve(el);
     };
   }, []);
 
@@ -69,7 +92,10 @@ const AboutUs = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 xl:gap-20 items-center">
           <div className={`order-2 lg:order-1 transition-all duration-[1800ms] ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-6'}`}>
-            <div className="relative w-full h-[350px] sm:h-[400px] md:h-[450px] lg:h-[550px] xl:h-[650px] overflow-hidden group">
+            <div 
+              ref={imageRef}
+              className={`relative w-full h-[350px] sm:h-[400px] md:h-[450px] lg:h-[550px] xl:h-[650px] overflow-hidden group transition-all duration-[2200ms] ease-out ${imageVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+            >
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10"></div>
               {images.map((image, index) => (
                 <div
