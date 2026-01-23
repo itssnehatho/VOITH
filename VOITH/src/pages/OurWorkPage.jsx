@@ -70,7 +70,7 @@ const OurWorkPage = () => {
             <div className={`group transition-all duration-1000 delay-100 ${
               projectsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
             }`}>
-              <div className="relative w-full h-[300px] sm:h-[350px] md:h-[450px] lg:h-[500px] xl:h-[600px] overflow-hidden mb-4 sm:mb-6 rounded-sm">
+              <div className="relative w-full h-[220px] sm:h-[250px] md:h-[300px] lg:h-[350px] xl:h-[400px] overflow-hidden mb-4 sm:mb-6 rounded-sm">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
                 <img 
                   src="/homepage.jpg" 
@@ -93,7 +93,7 @@ const OurWorkPage = () => {
             <div className={`group transition-all duration-1000 delay-200 ${
               projectsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
             }`}>
-              <div className="relative w-full h-[300px] sm:h-[350px] md:h-[450px] lg:h-[500px] xl:h-[600px] overflow-hidden mb-4 sm:mb-6 rounded-sm">
+              <div className="relative w-full h-[220px] sm:h-[250px] md:h-[300px] lg:h-[350px] xl:h-[400px] overflow-hidden mb-4 sm:mb-6 rounded-sm">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
                 <img 
                   src="/home2.png" 
@@ -116,7 +116,7 @@ const OurWorkPage = () => {
             <div className={`group transition-all duration-1000 delay-300 ${
               projectsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
             }`}>
-              <div className="relative w-full h-[300px] sm:h-[350px] md:h-[450px] lg:h-[500px] xl:h-[600px] overflow-hidden mb-4 sm:mb-6 rounded-sm">
+              <div className="relative w-full h-[220px] sm:h-[250px] md:h-[300px] lg:h-[350px] xl:h-[400px] overflow-hidden mb-4 sm:mb-6 rounded-sm">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
                 <img 
                   src="/homepage.jpg" 
@@ -139,7 +139,7 @@ const OurWorkPage = () => {
             <div className={`group transition-all duration-1000 delay-400 ${
               projectsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
             }`}>
-              <div className="relative w-full h-[300px] sm:h-[350px] md:h-[450px] lg:h-[500px] xl:h-[600px] overflow-hidden mb-4 sm:mb-6 rounded-sm">
+              <div className="relative w-full h-[220px] sm:h-[250px] md:h-[300px] lg:h-[350px] xl:h-[400px] overflow-hidden mb-4 sm:mb-6 rounded-sm">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
                 <img 
                   src="/home2.png" 
@@ -162,7 +162,7 @@ const OurWorkPage = () => {
             <div className={`group transition-all duration-1000 delay-500 ${
               projectsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
             }`}>
-              <div className="relative w-full h-[300px] sm:h-[350px] md:h-[450px] lg:h-[500px] xl:h-[600px] overflow-hidden mb-4 sm:mb-6 rounded-sm">
+              <div className="relative w-full h-[220px] sm:h-[250px] md:h-[300px] lg:h-[350px] xl:h-[400px] overflow-hidden mb-4 sm:mb-6 rounded-sm">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
                 <img 
                   src="/homepage.jpg" 
@@ -185,7 +185,7 @@ const OurWorkPage = () => {
             <div className={`group transition-all duration-1000 delay-600 ${
               projectsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
             }`}>
-              <div className="relative w-full h-[300px] sm:h-[350px] md:h-[450px] lg:h-[500px] xl:h-[600px] overflow-hidden mb-4 sm:mb-6 rounded-sm">
+              <div className="relative w-full h-[220px] sm:h-[250px] md:h-[300px] lg:h-[350px] xl:h-[400px] overflow-hidden mb-4 sm:mb-6 rounded-sm">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
                 <img 
                   src="/home2.png" 
@@ -208,7 +208,7 @@ const OurWorkPage = () => {
             <div className={`group transition-all duration-1000 delay-700 ${
               projectsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
             }`}>
-              <div className="relative w-full h-[300px] sm:h-[350px] md:h-[450px] lg:h-[500px] xl:h-[600px] overflow-hidden mb-4 sm:mb-6 rounded-sm">
+              <div className="relative w-full h-[220px] sm:h-[250px] md:h-[300px] lg:h-[350px] xl:h-[400px] overflow-hidden mb-4 sm:mb-6 rounded-sm">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
                 <img 
                   src="/homepage.jpg" 
@@ -231,7 +231,7 @@ const OurWorkPage = () => {
             <div className={`group transition-all duration-1000 delay-800 ${
               projectsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
             }`}>
-              <div className="relative w-full h-[300px] sm:h-[350px] md:h-[450px] lg:h-[500px] xl:h-[600px] overflow-hidden mb-4 sm:mb-6 rounded-sm">
+              <div className="relative w-full h-[220px] sm:h-[250px] md:h-[300px] lg:h-[350px] xl:h-[400px] overflow-hidden mb-4 sm:mb-6 rounded-sm">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
                 <img 
                   src="/home2.png" 
@@ -254,7 +254,7 @@ const OurWorkPage = () => {
             <div className={`group transition-all duration-1000 delay-900 ${
               projectsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
             }`}>
-              <div className="relative w-full h-[300px] sm:h-[350px] md:h-[450px] lg:h-[500px] xl:h-[600px] overflow-hidden mb-4 sm:mb-6 rounded-sm">
+              <div className="relative w-full h-[220px] sm:h-[250px] md:h-[300px] lg:h-[350px] xl:h-[400px] overflow-hidden mb-4 sm:mb-6 rounded-sm">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
                 <img 
                   src="/homepage.jpg" 

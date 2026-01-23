@@ -81,7 +81,7 @@ const GalleryPage = () => {
                   className={`group transition-all duration-1000 ${imagesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
                   style={{ transitionDelay: `${index * 150}ms` }}
                 >
-                  <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden mb-4 sm:mb-6">
+                  <div className="relative w-full h-[280px] sm:h-[350px] md:h-[420px] lg:h-[490px] overflow-hidden mb-4 sm:mb-6">
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
                     <img 
                       src={image.src} 
@@ -100,7 +100,7 @@ const GalleryPage = () => {
               className={`group transition-all duration-1000 ${imagesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
               style={{ transitionDelay: '300ms' }}
             >
-              <div className="relative w-full h-[500px] sm:h-[600px] md:h-[700px] lg:h-[800px] overflow-hidden mb-4 sm:mb-6">
+              <div className="relative w-full h-[350px] sm:h-[420px] md:h-[490px] lg:h-[560px] overflow-hidden mb-4 sm:mb-6">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
                 <img 
                   src={galleryImages.middle.src} 
@@ -120,7 +120,7 @@ const GalleryPage = () => {
                   className={`group transition-all duration-1000 ${imagesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
                   style={{ transitionDelay: `${(index + 2) * 150}ms` }}
                 >
-                  <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden mb-4 sm:mb-6">
+                  <div className="relative w-full h-[280px] sm:h-[350px] md:h-[420px] lg:h-[490px] overflow-hidden mb-4 sm:mb-6">
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
                     <img 
                       src={image.src} 

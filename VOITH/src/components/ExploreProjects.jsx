@@ -81,7 +81,7 @@ const ExploreProjects = () => {
             >
               <div 
                 ref={el => imageRefs.current[index] = el}
-                className={`relative w-full h-[350px] sm:h-[400px] md:h-[450px] lg:h-[550px] xl:h-[650px] overflow-hidden mb-6 sm:mb-8 transition-all duration-[2200ms] ease-out ${imageVisibilities[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+                className={`relative w-full h-[250px] sm:h-[280px] md:h-[320px] lg:h-[380px] xl:h-[420px] overflow-hidden mb-6 sm:mb-8 transition-all duration-[2200ms] ease-out ${imageVisibilities[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10"></div>
                 <img 
