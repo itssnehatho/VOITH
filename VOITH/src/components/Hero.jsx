@@ -52,7 +52,7 @@ const Hero = () => {
             {HERO_CONTENT.description}
           </p>
           
-          {/* CTA Button  */}
+          {/* Exp Button  */}
           <div className={`transition-all duration-[1800ms] ease-out delay-[400ms] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
             <a
               href="#work"
