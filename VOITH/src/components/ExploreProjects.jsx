@@ -65,7 +65,7 @@ const ExploreProjects = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="w-full bg-gradient-to-b from-gray-50 to-white py-20 sm:py-24 md:py-28 lg:py-32 xl:py-40">
+    <section ref={sectionRef} className="w-full bg-gradient-to-b from-gray-50 to-white pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-40 pb-12 sm:pb-16 md:pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         <h2 className={`font-['Times_New_Roman',serif] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-gray-900 tracking-[-0.03em] uppercase mb-16 sm:mb-20 md:mb-24 lg:mb-28 xl:mb-32 transition-all duration-[1800ms] ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
           <span className={`inline-block transition-all duration-[1500ms] ease-out delay-[100ms] hover:text-gray-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-6'}`}>EXPLORE</span>{' '}
