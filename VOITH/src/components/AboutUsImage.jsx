@@ -33,7 +33,7 @@ const AboutUsImage = () => {
           }
         });
 
-        // Text panel starts hidden
+        
         if (textPanelRef.current) {
           gsap.set(textPanelRef.current, { opacity: 0, x: -30 });
         }
@@ -48,17 +48,17 @@ const AboutUsImage = () => {
           start: 'top top',
           end: `+=${totalScrollDistance}`,
           pin: true,
-          scrub: 2, // Higher value = smoother, more lag
+          scrub: 2, 
           pinSpacing: true,
           ease: 'power1.out',
           onUpdate: (self) => {
             const progress = self.progress;
 
-            // Phase 1: Slide animation (0 to slidePhaseEnd)
+            
             if (progress <= slidePhaseEnd) {
               const slideProgress = progress / slidePhaseEnd;
               
-              // Image slides from full width to right half
+              // Image slides 
               const width = gsap.utils.interpolate(100, 55, slideProgress);
               const xPercent = gsap.utils.interpolate(0, 81.8, slideProgress);
               
@@ -67,14 +67,14 @@ const AboutUsImage = () => {
                 xPercent: xPercent,
               });
 
-              // Text fades in
+              
               if (textPanelRef.current) {
                 const textOpacity = gsap.utils.interpolate(0, 1, Math.min(1, slideProgress * 1.5));
                 const textX = gsap.utils.interpolate(-30, 0, slideProgress);
                 gsap.set(textPanelRef.current, { opacity: textOpacity, x: textX });
               }
             } else {
-              // Keep image at final position
+              
               gsap.set(imageContainerRef.current, {
                 width: '55%',
                 xPercent: 81.8,
@@ -86,7 +86,7 @@ const AboutUsImage = () => {
               }
             }
 
-            // Phase 2: Image cycling (after slidePhaseEnd)
+           
             if (progress > slidePhaseEnd) {
               const cycleProgress = (progress - slidePhaseEnd) / (1 - slidePhaseEnd);
               const totalImages = images.length;
@@ -98,12 +98,12 @@ const AboutUsImage = () => {
                 const segmentSize = 1 / totalImages;
                 const start = index * segmentSize;
                 const end = (index + 1) * segmentSize;
-                const fadeZone = 0.2; // Larger fade zone for smoother transitions
+                const fadeZone = 0.2; 
 
                 let opacity = 0;
                 let scale = 1.05;
 
-                // Last image stays visible from its start until the very end
+               
                 if (index === lastIndex && cycleProgress >= start) {
                   opacity = 1;
                   const localProgress = (cycleProgress - start) / (1 - start);
@@ -115,12 +115,12 @@ const AboutUsImage = () => {
                   scale = 1 + (0.02 * localProgress);
                   setCurrentIndex(index);
                 } else if (index < lastIndex && cycleProgress >= end && cycleProgress < end + fadeZone) {
-                  // Smooth fade out using easing function
+                  
                   const fadeProgress = (cycleProgress - end) / fadeZone;
                   opacity = 1 - (fadeProgress * fadeProgress); // Ease out
                   scale = 1.02 + (0.01 * fadeProgress);
                 } else if (index > 0 && cycleProgress >= start - fadeZone && cycleProgress < start) {
-                  // Smooth fade in using easing function
+          
                   const fadeProgress = (cycleProgress - (start - fadeZone)) / fadeZone;
                   opacity = fadeProgress * (2 - fadeProgress); // Ease in-out
                   scale = 1.05 - (0.05 * fadeProgress);
