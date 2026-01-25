@@ -185,7 +185,7 @@ const ContactPage = () => {
       </section>
 
       {/* Right-aligned Content  */}
-      <section ref={companiesRef} className="w-full bg-white py-16 sm:py-20 md:py-24 lg:py-28 border-t border-gray-200">
+      {/* <section ref={companiesRef} className="w-full bg-white py-16 sm:py-20 md:py-24 lg:py-28 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           <div className="flex justify-start md:justify-end">
             <div className={`w-full md:w-2/3 lg:w-1/2 transition-all duration-[1500ms] ease-out ${
@@ -197,11 +197,11 @@ const ContactPage = () => {
               </div>
               <h2 className="font-['Times_New_Roman',serif] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-gray-900 mb-10 sm:mb-12 md:mb-14 leading-[1.2] tracking-[-0.02em]">
                 Vaidya's Organization of Industry & Trading Houses
-              </h2>
+              </h2> */}
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10 md:gap-12">
+              {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10 md:gap-12"> */}
                 {/* ATHER ENERGY Image */}
-                <div className={`group transition-all duration-[1500ms] ease-out delay-[200ms] ${
+                {/* <div className={`group transition-all duration-[1500ms] ease-out delay-[200ms] ${
                   companiesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
                 }`}>
                   <div className="relative w-full h-[280px] sm:h-[320px] md:h-[380px] lg:h-[420px] overflow-hidden mb-4 sm:mb-5">
@@ -215,10 +215,10 @@ const ContactPage = () => {
                   <p className="font-['Times_New_Roman',serif] text-lg sm:text-xl md:text-2xl font-light text-gray-900 group-hover:text-gray-700 transition-colors duration-300">
                     ATHER ENERGY
                   </p>
-                </div>
+                </div> */}
 
                 {/* PITSTOP INCORPORATED Image */}
-                <div className={`group transition-all duration-[1500ms] ease-out delay-[400ms] ${
+                {/* <div className={`group transition-all duration-[1500ms] ease-out delay-[400ms] ${
                   companiesVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
                 }`}>
                   <div className="relative w-full h-[280px] sm:h-[320px] md:h-[380px] lg:h-[420px] overflow-hidden mb-4 sm:mb-5">
@@ -232,12 +232,12 @@ const ContactPage = () => {
                   <p className="font-['Times_New_Roman',serif] text-lg sm:text-xl md:text-2xl font-light text-gray-900 group-hover:text-gray-700 transition-colors duration-300">
                     PITSTOP INCORPORATED
                   </p>
-                </div>
-              </div>
-            </div>
+                </div> */}
+              {/* </div> */}
+            {/* </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
       </div>
