@@ -8,10 +8,10 @@ const Footer = () => {
           <div>
             <h3 className="text-xs sm:text-sm font-semibold mb-3 sm:mb-4 tracking-[0.1em] uppercase">LINKS</h3>
             <ul className="space-y-1.5 sm:space-y-2">
-              <li><a href="#work" className="text-sm sm:text-base text-gray-600 hover:text-gray-900 transition-colors">OUR WORK</a></li>
-              <li><a href="#gallery" className="text-sm sm:text-base text-gray-600 hover:text-gray-900 transition-colors">GALLERY</a></li>
-              <li><a href="#about" className="text-sm sm:text-base text-gray-600 hover:text-gray-900 transition-colors">ABOUT</a></li>
-              <li><a href="#contact" className="text-sm sm:text-base text-gray-600 hover:text-gray-900 transition-colors">CONTACT</a></li>
+              <li><a href="#work" className="text-sm sm:text-base text-gray-600 hover:text-red-600 transition-colors">OUR WORK</a></li>
+              <li><a href="#gallery" className="text-sm sm:text-base text-gray-600 hover:text-red-600 transition-colors">GALLERY</a></li>
+              <li><a href="#about" className="text-sm sm:text-base text-gray-600 hover:text-red-600 transition-colors">ABOUT</a></li>
+              <li><a href="#contact" className="text-sm sm:text-base text-gray-600 hover:text-red-600 transition-colors">CONTACT</a></li>
             </ul>
           </div>
 
@@ -19,10 +19,10 @@ const Footer = () => {
           <div>
             <h3 className="text-xs sm:text-sm font-semibold mb-3 sm:mb-4 tracking-[0.1em] uppercase">FOLLOW US</h3>
             <ul className="space-y-1.5 sm:space-y-2">
-              <li><a href="#" className="text-sm sm:text-base text-gray-600 hover:text-gray-900 transition-colors">FACEBOOK</a></li>
-              <li><a href="#" className="text-sm sm:text-base text-gray-600 hover:text-gray-900 transition-colors">INSTAGRAM</a></li>
-              <li><a href="#" className="text-sm sm:text-base text-gray-600 hover:text-gray-900 transition-colors">TIKTOK</a></li>
-              <li><a href="#" className="text-sm sm:text-base text-gray-600 hover:text-gray-900 transition-colors">LINKEDIN</a></li>
+              <li><a href="#" className="text-sm sm:text-base text-gray-600 hover:text-red-600 transition-colors">FACEBOOK</a></li>
+              <li><a href="#" className="text-sm sm:text-base text-gray-600 hover:text-red-600 transition-colorss">INSTAGRAM</a></li>
+              <li><a href="#" className="text-sm sm:text-base text-gray-600 hover:text-red-600 transition-colors">TIKTOK</a></li>
+              <li><a href="#" className="text-sm sm:text-base text-gray-600 hover:text-red-600 transition-colors">LINKEDIN</a></li>
             </ul>
           </div>
 
