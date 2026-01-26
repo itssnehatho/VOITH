@@ -7,6 +7,7 @@ const ContactPage = () => {
   const [heroVisible, setHeroVisible] = useState(false);
   const [contactVisible, setContactVisible] = useState(false);
   const contactRef = useRef(null);
+  const formRef = useRef(null);
 
   useEffect(() => {
     setPageLoaded(true);
@@ -30,9 +31,11 @@ const ContactPage = () => {
     );
 
     if (contactRef.current) observer.observe(contactRef.current);
+    if (formRef.current) observer.observe(formRef.current);
 
     return () => {
       if (contactRef.current) observer.unobserve(contactRef.current);
+      if (formRef.current) observer.unobserve(formRef.current);
     };
   }, []);
 
@@ -50,7 +53,7 @@ const ContactPage = () => {
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70"></div>
           </div>
 
-          {/* Hero Content  */}
+          {/* Hero Content */}
           <div className="relative z-10 h-full flex flex-col justify-center pt-32 sm:pt-40 lg:pt-48 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
             <div className={`mb-6 transition-all duration-[1500ms] ease-out delay-[200ms] ${
               heroVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
@@ -79,7 +82,7 @@ const ContactPage = () => {
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-14 md:gap-16 lg:gap-20">
-              
+
               {/* Left Headings */}
               <div className={`space-y-12 sm:space-y-14 md:space-y-16 transition-all duration-[1500ms] ease-out ${
                 contactVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-6'
@@ -108,7 +111,7 @@ const ContactPage = () => {
               <div className={`space-y-12 sm:space-y-14 md:space-y-16 transition-all duration-[1500ms] ease-out delay-[200ms] ${
                 contactVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-6'
               }`}>
-                
+
                 {/* General Inquiries */}
                 <div className="group">
                   <p className="text-base sm:text-lg md:text-xl text-gray-900 mb-4 sm:mb-5 font-light">
@@ -157,6 +160,68 @@ const ContactPage = () => {
               </div>
 
             </div>
+          </div>
+        </section>
+
+        {/* Contact Form Section */}
+        <section
+          ref={formRef}
+          className={`w-full py-16 sm:py-20 md:py-24 lg:py-28 transition-all duration-[1500ms] ease-out ${
+            contactVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+          }`}
+        >
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-gray-900 mb-8">
+              Send Us a Message
+            </h2>
+
+            <form className="grid grid-cols-1 gap-6">
+              <div>
+                <label className="block text-sm font-light text-gray-700 mb-2" htmlFor="name">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-red-600 focus:outline-none transition-all"
+                  placeholder="Your Name"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-light text-gray-700 mb-2" htmlFor="email">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-red-600 focus:outline-none transition-all"
+                  placeholder="your@email.com"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-light text-gray-700 mb-2" htmlFor="message">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={5}
+                  className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-red-600 focus:outline-none transition-all"
+                  placeholder="Your message..."
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full sm:w-auto bg-red-600 text-white font-light px-6 py-3 rounded-md hover:bg-red-700 transition-all duration-300"
+              >
+                Send Message
+              </button>
+            </form>
           </div>
         </section>
       </div>

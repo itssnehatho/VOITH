@@ -78,8 +78,12 @@ const Header = () => {
   return (
     <header className="w-full bg-transparent absolute top-0 left-0 z-[70]">
       <div className="w-full mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 pt-6 sm:pt-7 md:pt-8 lg:pt-10 xl:pt-12 pb-3 sm:pb-3.5 md:pb-4 flex items-center justify-between">
+        
         {/* Logo */}
-        <div className="flex items-center gap-2 sm:gap-2.5 md:gap-3 lg:gap-4">
+        <div 
+          className="flex items-center gap-2 sm:gap-2.5 md:gap-3 lg:gap-4 cursor-pointer" 
+          onClick={() => { window.location.hash = ''; }}
+        >
           <img 
             src="/voithlogo.png" 
             alt="VOITH" 
@@ -211,6 +215,7 @@ const Header = () => {
         </div>
       )}
 
+      {/* Desktop Projects Menu */}
       {isDesktopMenuOpen && (
         <>
           <div 
