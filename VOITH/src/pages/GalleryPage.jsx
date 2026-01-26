@@ -74,9 +74,13 @@ const GalleryPage = () => {
                   }`}
                   style={{ transitionDelay: `${index * 150}ms` }}
                 >
-                  <div className="relative w-full h-[260px] sm:h-[340px] md:h-[420px] lg:h-[480px] overflow-hidden mb-3 sm:mb-5">
+                  <div className="relative w-full h-[200px] sm:h-[260px] md:h-[320px] lg:h-[360px] overflow-hidden mb-3 sm:mb-5">
                     <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
-                    <img src={image.src} alt={image.alt} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" />
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                    />
                   </div>
                   <p className="font-['Times_New_Roman',serif] text-sm sm:text-base md:text-lg uppercase font-light text-center tracking-tight">
                     VIEW MEDIA
@@ -92,9 +96,13 @@ const GalleryPage = () => {
               }`}
               style={{ transitionDelay: '300ms' }}
             >
-              <div className="relative w-full h-[300px] sm:h-[380px] md:h-[460px] lg:h-[520px] overflow-hidden mb-3 sm:mb-5">
+              <div className="relative w-full h-[240px] sm:h-[300px] md:h-[360px] lg:h-[400px] overflow-hidden mb-3 sm:mb-5">
                 <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
-                <img src={galleryImages.middle.src} alt={galleryImages.middle.alt} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" />
+                <img
+                  src={galleryImages.middle.src}
+                  alt={galleryImages.middle.alt}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                />
               </div>
               <p className="font-['Times_New_Roman',serif] text-sm sm:text-base md:text-lg uppercase font-light text-center tracking-tight">
                 VIEW MEDIA
@@ -111,9 +119,13 @@ const GalleryPage = () => {
                   }`}
                   style={{ transitionDelay: `${(index + 2) * 150}ms` }}
                 >
-                  <div className="relative w-full h-[260px] sm:h-[340px] md:h-[420px] lg:h-[480px] overflow-hidden mb-3 sm:mb-5">
+                  <div className="relative w-full h-[200px] sm:h-[260px] md:h-[320px] lg:h-[360px] overflow-hidden mb-3 sm:mb-5">
                     <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
-                    <img src={image.src} alt={image.alt} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out" />
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                    />
                   </div>
                   <p className="font-['Times_New_Roman',serif] text-sm sm:text-base md:text-lg uppercase font-light text-center tracking-tight">
                     VIEW MEDIA
@@ -121,6 +133,7 @@ const GalleryPage = () => {
                 </div>
               ))}
             </div>
+
           </div>
         </section>
 
@@ -133,7 +146,12 @@ const GalleryPage = () => {
           curtainUp ? '-translate-y-full' : 'translate-y-0'
         }`}
       >
-        <img src="/voithlogo.png" alt="VOITH" className="h-16 md:h-20 lg:h-24 w-auto object-contain opacity-80 mb-4" style={{ animation: 'spin-reverse 1.5s linear', animationFillMode: 'forwards' }} />
+        <img
+          src="/voithlogo.png"
+          alt="VOITH"
+          className="h-16 md:h-20 lg:h-24 w-auto object-contain opacity-80 mb-4"
+          style={{ animation: 'spin-reverse 1.5s linear', animationFillMode: 'forwards' }}
+        />
         <p className="text-sm md:text-base text-gray-600 tracking-wider uppercase">LOADING...</p>
       </div>
     </div>

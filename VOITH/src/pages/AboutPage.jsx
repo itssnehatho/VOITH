@@ -108,9 +108,9 @@ const AboutPage = () => {
                 </p>
               </div>
 
-              {/* Right Image */}
-              <div className="md:col-span-2 lg:col-span-3 mt-8 md:mt-0" ref={rightImageRef}>
-                <div className={`relative w-full h-[400px] sm:h-[500px] md:h-[550px] lg:h-[600px] xl:h-[650px] overflow-hidden group transition-all duration-1000 ease-out ${rightImageVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
+              {/* Right Image (Taller + Moved Down) */}
+              <div className="md:col-span-2 lg:col-span-3 mt-20 md:mt-24 lg:mt-28" ref={rightImageRef}>
+                <div className={`relative w-full h-[500px] sm:h-[600px] md:h-[650px] lg:h-[700px] xl:h-[750px] overflow-hidden group transition-all duration-1000 ease-out ${rightImageVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
                   <img
                     src="/home2.png"

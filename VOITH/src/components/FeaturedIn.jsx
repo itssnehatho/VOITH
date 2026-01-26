@@ -1,15 +1,16 @@
 const FeaturedIn = () => {
   const logos = [
-    { src: '/toyota.png', name: 'Toyota', small: true },
+    { src: '/toyota.png', name: 'Toyota', small: true, link: '#toyota' },
     {
       src: '/vaidya.png',
       name: 'Vaidya Energy',
       lower: true,
       sizeClass: 'h-12 sm:h-14 md:h-16 lg:h-[72px]',
       offsetClass: 'translate-y-3 sm:translate-y-4 md:translate-y-5',
+      link: '#vaidya'
     },
-    { src: '/pitstop.png', name: 'Pitstop', lower: true },
-    { src: '/sasvata.png', name: 'Sasvata', small: true }
+    { src: '/pitstop.png', name: 'Pitstop', lower: true, link: '#pitstop' },
+    { src: '/sasvata.png', name: 'Sasvata', small: true, link: '#sasvata' }
   ];
 
   return (
@@ -34,12 +35,14 @@ const FeaturedIn = () => {
                 }`}
                 style={{ height: '32px', lineHeight: 0, display: 'flex', alignItems: 'flex-end' }}
               >
-                <img 
-                  src={logo.src} 
-                  alt={logo.name}
-                  className={`${logo.sizeClass ?? (logo.small ? 'h-6 sm:h-7 md:h-8 lg:h-10' : 'h-9 sm:h-11 md:h-12 lg:h-14')} w-auto object-contain hover:scale-105 hover:opacity-80 grayscale-[0.4] hover:grayscale-0 transition-all duration-500 ease-out`}
-                  style={{ verticalAlign: 'bottom', display: 'block' }}
-                />
+                <a href={logo.link}>
+                  <img 
+                    src={logo.src} 
+                    alt={logo.name}
+                    className={`${logo.sizeClass ?? (logo.small ? 'h-6 sm:h-7 md:h-8 lg:h-10' : 'h-9 sm:h-11 md:h-12 lg:h-14')} w-auto object-contain hover:scale-105 hover:opacity-80 grayscale-[0.4] hover:grayscale-0 transition-all duration-500 ease-out`}
+                    style={{ verticalAlign: 'bottom', display: 'block' }}
+                  />
+                </a>
               </div>
             ))}
           </div>

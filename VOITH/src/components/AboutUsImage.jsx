@@ -40,9 +40,7 @@ const AboutUsImage = () => {
 
         // Total scroll distance
         const totalScrollDistance = (images.length + 1) * window.innerHeight;
-        const slidePhaseEnd = 0.15; // First 15% is for sliding animation
-
-        // Single ScrollTrigger for everything
+        const slidePhaseEnd = 0.15; 
         ScrollTrigger.create({
           trigger: sectionRef.current,
           start: 'top top',
