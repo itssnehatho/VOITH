@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 @layer utilities {
-  /* Consistent horizontal gutters across the site (max 60px). */
+
   .site-x {
     padding-left: clamp(16px, 5vw, 60px);
     padding-right: clamp(16px, 5vw, 60px);

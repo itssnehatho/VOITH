@@ -27,3 +27,4 @@ export const ABOUT_US_CONTENT = {
   description: "VOITH or Vaidya's Organization of Industries & Trading Houses is a dynamic business organization in Nepal, dedicated to integrity, excellence, and leadership. We are involved in various sectors including automotive, energy, retail, and more. Our commitment to Nepal's development drives us to support labor-intensive, agro-based industries to uplift the poorest people and create sustainable growth.",
   buttonText: 'LEARN MORE'
 };
+

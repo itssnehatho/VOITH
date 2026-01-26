@@ -177,7 +177,7 @@ const AboutUsImage = () => {
 
       {/* Desktop Layout */}
       <div ref={wrapperRef} className="hidden md:block relative h-screen bg-[#f8f7f4] overflow-hidden">
-        {/* Left side - Text Panel */}
+        {/* Left side  */}
         <div
           ref={textPanelRef}
           className="absolute left-0 top-0 w-[45%] h-full z-10 flex flex-col justify-center px-12 lg:px-16 xl:px-20"
@@ -212,7 +212,7 @@ const AboutUsImage = () => {
           </div>
         </div>
 
-        {/* Right side - Image Container */}
+        {/* Right side */}
         <div
           ref={imageContainerRef}
           className="absolute top-0 left-0 h-full overflow-hidden"

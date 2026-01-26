@@ -66,7 +66,8 @@ const ExploreProjects = () => {
 
   return (
     <section ref={sectionRef} className="w-full bg-gradient-to-b from-gray-50 to-white pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-40 pb-12 sm:pb-16 md:pb-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+      {/* Container aligned  */}
+      <div className="w-full px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 mx-auto">
         <h2 className={`font-['Times_New_Roman',serif] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-gray-900 tracking-[-0.03em] uppercase mb-16 sm:mb-20 md:mb-24 lg:mb-28 xl:mb-32 transition-all duration-[1800ms] ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
           <span className={`inline-block transition-all duration-[1500ms] ease-out delay-[100ms] hover:text-gray-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-6'}`}>EXPLORE</span>{' '}
           <span className={`inline-block transition-all duration-[1500ms] ease-out delay-[300ms] hover:text-gray-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-6'}`}>PROJECTS</span>
@@ -86,7 +87,7 @@ const ExploreProjects = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10"></div>
                 <img 
                   src={project.image} 
-                  alt={project.title} 
+                  alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-[1.05] transition-transform duration-[2000ms] ease-out"
                 />
                 <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 transform translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-700 z-20">
