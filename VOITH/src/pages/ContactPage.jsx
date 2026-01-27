@@ -59,7 +59,7 @@ const ContactPage = () => {
               heroVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
             }`}>
               <span className="text-xs sm:text-sm font-light text-white/80 tracking-[0.3em] uppercase">
-                <span className="text-red-500/90">•</span> CONTACT
+                <span className="text-red-600">•</span> CONTACT
               </span>
             </div>
             <h1 className={`font-['Times_New_Roman',serif] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-white mb-6 sm:mb-8 md:mb-10 max-w-4xl leading-[1.1] tracking-[-0.02em] transition-all duration-[1500ms] ease-out ${
@@ -83,10 +83,10 @@ const ContactPage = () => {
           style={{ background: 'linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%)' }}
         >
           <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-14 md:gap-16 lg:gap-20">
+            <div className="space-y-12 sm:space-y-14 md:space-y-16 lg:space-y-20">
 
-              {/* Left Headings */}
-              <div className={`space-y-12 sm:space-y-14 md:space-y-16 transition-all duration-[1500ms] ease-out ${
+              {/* General Inquiries Row */}
+              <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 lg:gap-20 items-start transition-all duration-[1500ms] ease-out ${
                 contactVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-6'
               }`}>
                 <div>
@@ -95,26 +95,6 @@ const ContactPage = () => {
                   </h2>
                   <div className="h-px w-16 bg-gray-300"></div>
                 </div>
-                <div>
-                  <h2 className="text-xs sm:text-xs md:text-sm font-light text-gray-500 mb-8 tracking-[0.2em] uppercase">
-                    <span className="text-red-600">•</span> SOCIAL LINKS
-                  </h2>
-                  <div className="h-px w-16 bg-gray-300"></div>
-                </div>
-                <div>
-                  <h2 className="text-xs sm:text-xs md:text-sm font-light text-gray-500 tracking-[0.2em] uppercase">
-                    <span className="text-red-600">•</span> CAREER OPPORTUNITIES
-                  </h2>
-                  <div className="h-px w-16 bg-gray-300 mt-8"></div>
-                </div>
-              </div>
-
-              {/* Contact Details */}
-              <div className={`space-y-12 sm:space-y-14 md:space-y-16 transition-all duration-[1500ms] ease-out delay-[200ms] ${
-                contactVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-6'
-              }`}>
-
-                {/* General Inquiries */}
                 <div className="group">
                   <p className="text-base sm:text-lg md:text-xl text-gray-900 mb-4 sm:mb-5 font-light">
                     <a 
@@ -130,30 +110,51 @@ const ContactPage = () => {
                     <span className="text-gray-600">P.O. BOX: 233/2640, Kathmandu, Nepal</span>
                   </p>
                 </div>
+              </div>
 
-                {/* Social Links  */}
+              {/* Social Links Row */}
+              <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 lg:gap-20 items-center transition-all duration-[1500ms] ease-out delay-[200ms] ${
+                contactVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-6'
+              }`}>
+                <div>
+                  <h2 className="text-xs sm:text-xs md:text-sm font-light text-gray-500 tracking-[0.2em] uppercase">
+                    <span className="text-red-600">•</span> SOCIAL LINKS
+                  </h2>
+                  <div className="h-px w-16 bg-gray-300 mt-8"></div>
+                </div>
                 <div>
                   <div className="flex flex-wrap items-center gap-6 sm:gap-8">
                     {['FACEBOOK', 'INSTAGRAM', 'LINKED IN', 'TIKTOK'].map((social) => (
                       <a
                         key={social}
                         href="#"
-                        className="group/link text-gray-700 hover:text-red-600 transition-all duration-300 text-sm sm:text-base md:text-lg font-light relative"
+                        className="text-gray-700 hover:text-red-600 transition-colors text-sm sm:text-base md:text-lg font-light"
                       >
-                        <span className="relative z-10">{social}</span>
-                        <span className="absolute bottom-0 left-0 w-0 h-px bg-red-600 group-hover/link:w-full transition-all duration-300"></span>
+                        {social}
                       </a>
                     ))}
                   </div>
                 </div>
+              </div>
 
-                {/* Career Opportunities */}
+              {/* Career Opportunities Row */}
+              <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 lg:gap-20 items-start transition-all duration-[1500ms] ease-out delay-[400ms] ${
+                contactVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-6'
+              }`}>
                 <div>
-                  <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed font-light text-justify">
-                    Please send your resume & work sample to:{' '}
+                  <h2 className="text-xs sm:text-xs md:text-sm font-light text-gray-500 tracking-[0.2em] uppercase">
+                    <span className="text-red-600">•</span> CAREER OPPORTUNITIES
+                  </h2>
+                  <div className="h-px w-16 bg-gray-300 mt-8"></div>
+                </div>
+                <div>
+                  <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed font-light text-justify mb-2">
+                    Please send your resume & work sample to:
+                  </p>
+                  <p>
                     <a 
                       href="mailto:careers@voith.com.np" 
-                      className="text-gray-900 hover:text-red-600 transition-colors duration-300 border-b border-transparent hover:border-red-600 pb-1"
+                      className="text-sm sm:text-base md:text-lg text-gray-900 hover:text-red-600 transition-colors duration-300 border-b border-transparent hover:border-red-600 pb-1"
                     >
                       careers@voith.com.np
                     </a>
@@ -263,7 +264,7 @@ const ContactPage = () => {
               <div className="pt-4">
                 <button
                   type="submit"
-                  className="group w-full md:w-auto px-10 py-4 bg-gray-900 text-white text-sm font-light tracking-[0.1em] uppercase rounded-full transition-all duration-300 hover:bg-red-600 hover:shadow-lg hover:shadow-red-600/20 flex items-center justify-center gap-3"
+                  className="group w-full md:w-auto px-10 py-4 bg-transparent border border-gray-900 text-gray-900 text-sm font-light tracking-[0.1em] uppercase rounded-full transition-all duration-300 hover:bg-red-600 hover:border-red-600 hover:text-white hover:shadow-lg hover:shadow-red-600/20 flex items-center justify-center gap-3"
                 >
                   <span>Send Message</span>
                   <svg 

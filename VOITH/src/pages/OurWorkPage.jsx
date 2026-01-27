@@ -47,7 +47,7 @@ const OurWorkPage = () => {
   }, [isVisible]);
 
   return (
-    <div className="min-h-screen bg-[#FAF5ED] overflow-hidden relative">
+    <div className="min-h-screen bg-[#FAF5ED] relative">
       <Header />
       
       {/* Hero Section with Title */}

@@ -123,7 +123,7 @@ const Header = () => {
           <img 
             src="/voithlogo.png" 
             alt="VOITH" 
-            className="h-10 sm:h-11 md:h-12 w-auto object-contain"
+            className="h-12 sm:h-14 md:h-16 lg:h-16 w-auto object-contain"
           />
           <p className={`hidden lg:block text-xs md:text-sm lg:text-base font-light tracking-wide ${textColorClass} leading-none`}>
             Vaidya's Organization of Industry & Trading Houses
@@ -152,7 +152,7 @@ const Header = () => {
             </a>
           ))}
           <button 
-            className={`${iconColorClass} ml-2 md:ml-4 relative z-[70] flex items-center`} 
+            className={`${isDesktopMenuOpen ? 'text-white' : iconColorClass} ml-2 md:ml-4 relative z-[70] flex items-center`} 
             aria-label="Toggle projects menu"
             onClick={toggleDesktopMenu}
           >

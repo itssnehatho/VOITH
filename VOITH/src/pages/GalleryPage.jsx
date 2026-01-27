@@ -76,7 +76,7 @@ const GalleryPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#FAF5ED] overflow-hidden relative">
+    <div className="min-h-screen bg-[#FAF5ED] relative">
       <div className="relative">
         <Header />
 

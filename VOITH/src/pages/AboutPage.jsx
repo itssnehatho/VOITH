@@ -50,7 +50,7 @@ const AboutPage = () => {
 
   return (
     <div className="min-h-screen bg-[#FAF5ED] relative">
-      <div className={`relative transition-all duration-[2000ms] ease-out ${pageLoaded ? 'translate-y-0 opacity-100' : 'opacity-0'}`}>
+      <div className={`relative transition-opacity duration-[2000ms] ease-out ${pageLoaded ? 'opacity-100' : 'opacity-0'}`}>
         <Header />
 
         {/* Hero Section */}
@@ -181,8 +181,8 @@ const AboutPage = () => {
           <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
             <div>
               <h2 className="font-['Times_New_Roman',serif] text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light text-gray-900 tracking-[-0.03em] uppercase mb-4">
-                <span className="inline-block hover:text-red-600/80 transition-colors duration-300">EXPLORE</span>{' '}
-                <span className="inline-block hover:text-red-600/80 transition-colors duration-300">PROJECTS</span>
+                <span className="inline-block hover:text-red-600 transition-colors duration-300">EXPLORE</span>{' '}
+                <span className="inline-block hover:text-red-600 transition-colors duration-300">PROJECTS</span>
               </h2>
               <div className="h-px w-24 bg-gradient-to-r from-red-600 to-transparent mb-16 sm:mb-20 md:mb-24 lg:mb-28 xl:mb-32"></div>
             </div>
@@ -201,7 +201,7 @@ const AboutPage = () => {
                       className="w-full h-full object-cover group-hover:scale-[1.05] transition-transform duration-[2000ms] ease-out"
                     />
                     <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
-                      <div className="w-12 h-12 bg-red-600/90 rounded-full flex items-center justify-center backdrop-blur-sm">
+                      <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center backdrop-blur-sm">
                         <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>

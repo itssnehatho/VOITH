@@ -80,11 +80,11 @@ const AboutUs = () => {
                 window.scrollTo(0, 0);
                 window.location.hash = '#about';
               }}
-              className={`group inline-block px-8 sm:px-10 md:px-12 py-3.5 sm:py-4 md:py-5 bg-gray-900 text-white font-light text-xs sm:text-sm uppercase tracking-[0.15em] rounded-full hover:bg-red-600 transition-all duration-500 ease-out hover:shadow-xl relative overflow-hidden ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+              className={`group inline-block px-6 sm:px-7 md:px-8 py-3 sm:py-3.5 md:py-4 bg-transparent border border-gray-900 text-gray-900 font-light text-xs sm:text-sm uppercase tracking-[0.15em] rounded-full hover:bg-red-600 hover:border-red-600 hover:text-white transition-all duration-300 ease-out hover:shadow-xl relative overflow-hidden ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
               style={{ transitionDelay: '500ms' }}
             >
               <span className="relative z-10">{ABOUT_US_CONTENT.buttonText}</span>
-              <span className="absolute inset-0 bg-white/5 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out origin-left"></span>
+              <span className="absolute inset-0 bg-red-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left rounded-full"></span>
             </a>
           </div>
 

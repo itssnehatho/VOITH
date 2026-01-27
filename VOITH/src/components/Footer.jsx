@@ -8,10 +8,42 @@ const Footer = () => {
           <div>
             <h3 className="text-xs sm:text-sm font-semibold mb-3 sm:mb-4 tracking-[0.1em] uppercase">LINKS</h3>
             <ul className="space-y-1.5 sm:space-y-2">
-              <li><a href="#work" className="text-sm sm:text-base text-gray-600 hover:text-red-600 transition-colors">OUR WORK</a></li>
-              <li><a href="#gallery" className="text-sm sm:text-base text-gray-600 hover:text-red-600 transition-colors">GALLERY</a></li>
-              <li><a href="#about" className="text-sm sm:text-base text-gray-600 hover:text-red-600 transition-colors">ABOUT</a></li>
-              <li><a href="#contact" className="text-sm sm:text-base text-gray-600 hover:text-red-600 transition-colors">CONTACT</a></li>
+              <li><a 
+                href="#work" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.scrollTo(0, 0);
+                  window.location.hash = '#work';
+                }}
+                className="text-sm sm:text-base text-gray-600 hover:text-red-600 transition-colors"
+              >OUR WORK</a></li>
+              <li><a 
+                href="#gallery" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.scrollTo(0, 0);
+                  window.location.hash = '#gallery';
+                }}
+                className="text-sm sm:text-base text-gray-600 hover:text-red-600 transition-colors"
+              >GALLERY</a></li>
+              <li><a 
+                href="#about" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.scrollTo(0, 0);
+                  window.location.hash = '#about';
+                }}
+                className="text-sm sm:text-base text-gray-600 hover:text-red-600 transition-colors"
+              >ABOUT</a></li>
+              <li><a 
+                href="#contact" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.scrollTo(0, 0);
+                  window.location.hash = '#contact';
+                }}
+                className="text-sm sm:text-base text-gray-600 hover:text-red-600 transition-colors"
+              >CONTACT</a></li>
             </ul>
           </div>
 
@@ -44,11 +76,11 @@ const Footer = () => {
           </div>
 
           {/* Logo */}
-          <div className="flex justify-start sm:justify-end md:justify-start mt-4 sm:mt-0">
+          <div className="flex justify-end mt-4 sm:mt-0">
             <img 
               src="/voithlogo.png" 
               alt="VOITH" 
-              className="h-12 sm:h-14 md:h-16 lg:h-20 xl:h-24 w-auto object-contain"
+              className="h-16 sm:h-20 md:h-24 lg:h-28 xl:h-32 w-auto object-contain"
             />
           </div>
         </div>
