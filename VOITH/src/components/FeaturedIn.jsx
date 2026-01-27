@@ -15,7 +15,7 @@ const FeaturedIn = () => {
 
   return (
     <section className="w-full bg-white py-2 sm:py-2.5 md:py-3 border-b border-gray-200">
-      <div className="max-w-[1440px] mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         <div className="flex items-center justify-between flex-wrap gap-2 sm:gap-2.5 md:gap-3"> 
           <h2 className="text-[8px] sm:text-[9px] md:text-[10px] font-light text-gray-400 tracking-[0.25em] uppercase">  
             • FEATURED IN 

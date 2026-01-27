@@ -26,8 +26,8 @@ const Belief = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full bg-gradient-to-b from-white via-[#fafafa] to-white min-h-screen flex items-center justify-center py-20 sm:py-24 md:py-28 lg:py-32 xl:py-40">
-      <div className="max-w-[1440px] mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 text-center">
+    <section ref={sectionRef} className="w-full bg-gradient-to-b from-[#FDFBF8] via-[#FAF5ED] to-[#FDFBF8] min-h-screen flex items-center justify-center py-20 sm:py-24 md:py-28 lg:py-32 xl:py-40">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 text-center">
         <div className="flex justify-center mb-12 sm:mb-14 md:mb-16 lg:mb-20 xl:mb-24">
           <div className={`flex items-center justify-center transition-all duration-[2000ms] ease-out ${isVisible ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 translate-y-8'}`}>
             <img 

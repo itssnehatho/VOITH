@@ -48,8 +48,8 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full bg-white py-20 sm:py-24 md:py-28 lg:py-32 xl:py-40">
-      <div className="max-w-[1440px] mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+    <section ref={sectionRef} className="w-full bg-[#FDFBF8] py-20 sm:py-24 md:py-28 lg:py-32 xl:py-40">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 xl:gap-20 items-center">
 
           <div className={`order-2 lg:order-1 transition-all duration-[1800ms] ease-out ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-6'}`}>

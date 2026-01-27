@@ -15,7 +15,7 @@ const VaidyaEnergy = () => {
                 ×
             </button>
 
-            <div className="text-section md:w-1/2 p-8 sm:p-10 md:p-12 lg:p-16 flex flex-col justify-between bg-[#FFF9F0] z-10 relative">
+            <div className="text-section md:w-1/2 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-10 md:py-12 lg:py-16 flex flex-col justify-between bg-[#FFF9F0] z-10 relative">
                 <div>
                     <h3 className="text-xs sm:text-sm font-light text-gray-500 flex items-center gap-2 tracking-[0.2em] uppercase mb-8 sm:mb-10 md:mb-12">
                         <span className="w-1.5 h-1.5 bg-gray-400 rounded-full inline-block"></span>

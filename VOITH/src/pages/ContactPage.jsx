@@ -40,7 +40,7 @@ const ContactPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white overflow-hidden relative">
+    <div className="min-h-screen bg-[#FAF5ED] overflow-hidden relative">
       <div className="relative">
         <Header />
 
@@ -50,11 +50,11 @@ const ContactPage = () => {
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: "url('/homepage.jpg')" }}
           >
-            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/70 to-black/80"></div>
           </div>
 
           {/* Hero Content */}
-          <div className="relative z-10 h-full flex flex-col justify-center pt-32 sm:pt-40 lg:pt-48 max-w-[1440px] mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+          <div className="relative z-10 h-full flex flex-col justify-center pt-32 sm:pt-40 lg:pt-48 max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
             <div className={`mb-6 transition-all duration-[1500ms] ease-out delay-[200ms] ${
               heroVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
             }`}>
@@ -82,7 +82,7 @@ const ContactPage = () => {
           className="w-full py-16 sm:py-20 md:py-24 lg:py-28"
           style={{ background: 'linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%)' }}
         >
-          <div className="max-w-[1440px] mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-14 md:gap-16 lg:gap-20">
 
               {/* Left Headings */}
@@ -168,11 +168,11 @@ const ContactPage = () => {
         {/* Contact Form Section */}
         <section
           ref={formRef}
-          className={`w-full py-16 sm:py-20 md:py-24 lg:py-32 bg-white transition-all duration-[1500ms] ease-out ${
+          className={`w-full py-16 sm:py-20 md:py-24 lg:py-32 bg-[#FDFBF8] transition-all duration-[1500ms] ease-out ${
             contactVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}
         >
-          <div className="max-w-[1440px] mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
             <div className="text-center mb-12 sm:mb-16">
               <h2 className="font-['Times_New_Roman',serif] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-gray-900 mb-3 tracking-[-0.02em]">
                 Send Us a Message

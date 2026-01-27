@@ -40,7 +40,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/70 to-black/80"></div>
       </div>
 
-      <div className="relative z-10 h-full flex flex-col justify-center items-start text-left max-w-[1440px] mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 pt-16 sm:pt-20 md:pt-24 lg:pt-32 xl:pt-40">
+      <div className="relative z-10 h-full flex flex-col justify-center items-start text-left max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 pt-16 sm:pt-20 md:pt-24 lg:pt-32 xl:pt-40">
         <div className="max-w-4xl lg:max-w-5xl relative w-full">
           {/* Headline  */}
           <h1 className={`font-['Times_New_Roman',serif] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-white mb-6 sm:mb-7 md:mb-8 lg:mb-10 leading-[1.1] tracking-[-0.03em] transition-all duration-[1800ms] ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>

@@ -26,6 +26,42 @@ const Header = () => {
       href: '#work',
       image: '/homepage.jpg',
       description: 'Explore our industrial excellence here'
+    },
+    { 
+      title: 'INFRASTRUCTURE', 
+      href: '#work',
+      image: '/home2.png',
+      description: 'Building the future of Nepal'
+    },
+    { 
+      title: 'HOSPITALITY', 
+      href: '#work',
+      image: '/homepage.jpg',
+      description: 'Luxury hospitality spaces'
+    },
+    { 
+      title: 'MIXED-USE', 
+      href: '#work',
+      image: '/home2.png',
+      description: 'Integrated developments'
+    },
+    { 
+      title: 'RETAIL PROJECTS', 
+      href: '#work',
+      image: '/homepage.jpg',
+      description: 'Modern retail spaces'
+    },
+    { 
+      title: 'EDUCATIONAL', 
+      href: '#work',
+      image: '/home2.png',
+      description: 'Educational facilities'
+    },
+    { 
+      title: 'HEALTHCARE', 
+      href: '#work',
+      image: '/homepage.jpg',
+      description: 'Healthcare excellence'
     }
   ];
 
@@ -226,12 +262,15 @@ const Header = () => {
             <div className="min-h-screen flex flex-col pointer-events-auto">
               <div className="flex-1 flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 pt-8 md:pt-12 lg:pt-16 pb-12 md:pb-16 lg:pb-20">
                 <div className="max-w-7xl w-full">
-                  <h2 className={`font-['Times_New_Roman',serif] text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-white mb-12 md:mb-16 lg:mb-20 text-center tracking-[-0.02em] uppercase transition-all duration-1000 ease-out ${
-                    projectsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'
-                  }`}>
-                    PROJECTS
-                  </h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
+                  <div className="text-center mb-12 md:mb-16 lg:mb-20">
+                    <h2 className={`font-['Times_New_Roman',serif] text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light text-white mb-4 tracking-[-0.02em] uppercase transition-all duration-1000 ease-out ${
+                      projectsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-8'
+                    }`}>
+                      PROJECTS
+                    </h2>
+                    <div className="h-px w-24 bg-gradient-to-r from-transparent via-red-600 to-transparent mx-auto"></div>
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 lg:gap-12">
                     {projects.map((project, index) => (
                       <a
                         key={index}
@@ -244,24 +283,25 @@ const Header = () => {
                         className={`group block transition-all duration-1000 ease-out ${
                           projectsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
                         }`}
-                        style={{ transitionDelay: `${index * 150}ms` }}
+                        style={{ transitionDelay: `${index * 100}ms` }}
                       >
-                        <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden mb-6 rounded-sm">
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
+                        <div className="relative w-full h-[220px] sm:h-[250px] md:h-[300px] lg:h-[350px] xl:h-[400px] overflow-hidden mb-4 sm:mb-6 rounded-sm">
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
                           <img 
                             src={project.image} 
-                            alt={project.title} 
+                            alt={project.title}
+                            loading="lazy"
                             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                           />
-                          <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 z-20">
-                            <p className="text-white text-lg font-light">{project.description}</p>
+                          <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 z-20">
+                            <p className="text-white text-sm sm:text-base md:text-lg font-light">{project.description}</p>
                           </div>
                         </div>
                         <div className="pt-2">
-                          <p className="font-['Times_New_Roman',serif] text-xl md:text-2xl lg:text-3xl font-light text-white tracking-[-0.01em] uppercase group-hover:text-gray-300 transition-colors">
+                          <p className="font-['Times_New_Roman',serif] text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-white tracking-[-0.01em] uppercase">
                             {project.title}
                           </p>
-                          <div className="mt-4 h-px w-0 bg-white group-hover:w-full transition-all duration-700 ease-out"></div>
+                          <div className="mt-3 sm:mt-4 h-px w-0 bg-red-600 group-hover:w-full transition-all duration-700 ease-out"></div>
                         </div>
                       </a>
                     ))}

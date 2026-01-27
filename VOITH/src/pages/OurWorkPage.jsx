@@ -47,12 +47,12 @@ const OurWorkPage = () => {
   }, [isVisible]);
 
   return (
-    <div className="min-h-screen bg-white overflow-hidden relative">
+    <div className="min-h-screen bg-[#FAF5ED] overflow-hidden relative">
       <Header />
       
       {/* Hero Section with Title */}
       <section className="relative w-full pt-24 sm:pt-28 md:pt-32 lg:pt-40 pb-16 sm:pb-20 md:pb-24">
-        <div className="max-w-[1440px] mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           <div>
             <h1
               ref={titleRef}
@@ -69,7 +69,7 @@ const OurWorkPage = () => {
 
       {/* Projects Grid Section */}
       <section ref={projectsRef} className="w-full pb-16 sm:pb-20 md:pb-24 lg:pb-32 xl:pb-40">
-        <div className="max-w-[1440px] mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 lg:gap-12">
             {/* Repeat all projects */}
             {[
@@ -140,7 +140,7 @@ const OurWorkPage = () => {
                   <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-light text-gray-800 tracking-tight uppercase">
                     {project.title}
                   </p>
-                  <div className="mt-3 h-0.5 w-0 bg-gray-600 group-hover:w-full transition-all duration-700"></div>
+                  <div className="mt-3 h-0.5 w-0 bg-red-600 group-hover:w-full transition-all duration-700"></div>
                 </div>
               </div>
             ))}

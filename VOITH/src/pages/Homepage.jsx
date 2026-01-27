@@ -21,7 +21,7 @@ const Homepage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white relative">
+    <div className="min-h-screen bg-[#FAF5ED] relative">
       <div className="relative">
         <Header />
         <div className="relative w-full h-screen overflow-hidden">
