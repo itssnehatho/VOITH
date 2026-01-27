@@ -89,7 +89,7 @@ const Header = () => {
             alt="VOITH" 
             className="h-10 sm:h-11 md:h-12 w-auto object-contain"
           />
-          <p className={`hidden lg:block text-xs md:text-sm lg:text-base font-light tracking-wide ${textColorClass}`}>
+          <p className={`hidden lg:block text-xs md:text-sm lg:text-base font-light tracking-wide ${textColorClass} leading-none`}>
             Vaidya's Organization of Industry & Trading Houses
           </p>
         </div> 
@@ -110,18 +110,18 @@ const Header = () => {
                   }
                 }
               }}
-              className={`${textColorClass} font-semibold text-xs md:text-sm lg:text-[15px] hover:text-red-600 transition-colors uppercase tracking-[0.1em] leading-tight`}
+              className={`${textColorClass} font-semibold text-[10px] md:text-[11px] lg:text-xs hover:text-red-600 transition-colors uppercase tracking-[0.1em] leading-none relative top-[1px]`}
             >
               {item.label}
             </a>
           ))}
           <button 
-            className={`${iconColorClass} ml-2 md:ml-4 relative z-[70]`} 
+            className={`${iconColorClass} ml-2 md:ml-4 relative z-[70] flex items-center`} 
             aria-label="Toggle projects menu"
             onClick={toggleDesktopMenu}
           >
             {isDesktopMenuOpen ? (
-              <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 md:w-4.5 md:h-4.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path 
                   strokeLinecap="round" 
                   strokeLinejoin="round" 
@@ -130,7 +130,7 @@ const Header = () => {
                 />
               </svg>
             ) : (
-              <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 md:w-4.5 md:h-4.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path 
                   strokeLinecap="round" 
                   strokeLinejoin="round" 

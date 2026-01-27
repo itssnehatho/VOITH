@@ -67,11 +67,14 @@ const ExploreProjects = () => {
   return (
     <section ref={sectionRef} className="w-full bg-gradient-to-b from-gray-50 to-white pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-40 pb-12 sm:pb-16 md:pb-20">
       {/* Container aligned  */}
-      <div className="w-full px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 mx-auto">
-        <h2 className={`font-['Times_New_Roman',serif] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-gray-900 tracking-[-0.03em] uppercase mb-16 sm:mb-20 md:mb-24 lg:mb-28 xl:mb-32 transition-all duration-[1800ms] ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-          <span className={`inline-block transition-all duration-[1500ms] ease-out delay-[100ms] hover:text-gray-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-6'}`}>EXPLORE</span>{' '}
-          <span className={`inline-block transition-all duration-[1500ms] ease-out delay-[300ms] hover:text-gray-700 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-6'}`}>PROJECTS</span>
-        </h2>
+      <div className="max-w-[1440px] mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+        <div>
+          <h2 className={`font-['Times_New_Roman',serif] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-gray-900 tracking-[-0.03em] uppercase mb-4 transition-all duration-[1800ms] ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+            <span className={`inline-block transition-all duration-[1500ms] ease-out delay-[100ms] hover:text-red-600/80 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-6'}`}>EXPLORE</span>{' '}
+            <span className={`inline-block transition-all duration-[1500ms] ease-out delay-[300ms] hover:text-red-600/80 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-6'}`}>PROJECTS</span>
+          </h2>
+          <div className="h-px w-24 bg-gradient-to-r from-red-600 to-transparent mb-16 sm:mb-20 md:mb-24 lg:mb-28 xl:mb-32"></div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-14 xl:gap-18">
           {projects.map((project, index) => (

@@ -10,6 +10,11 @@
     padding-left: clamp(16px, 5vw, 60px);
     padding-right: clamp(16px, 5vw, 60px);
   }
+
+  .text-justify {
+    text-align: justify;
+    text-justify: inter-word;
+  }
 }
 
 * {
@@ -32,6 +37,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   letter-spacing: -0.01em;
+}
+
+.vision-flip-perspective {
+  perspective: 1200px;
+}
+
+.vision-flip-item {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform, opacity;
+}
+
+.vision-flip-item img {
+  backface-visibility: hidden;
 }
 
 @keyframes spin-reverse {

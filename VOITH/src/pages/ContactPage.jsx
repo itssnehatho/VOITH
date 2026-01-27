@@ -54,18 +54,20 @@ const ContactPage = () => {
           </div>
 
           {/* Hero Content */}
-          <div className="relative z-10 h-full flex flex-col justify-center pt-32 sm:pt-40 lg:pt-48 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
+          <div className="relative z-10 h-full flex flex-col justify-center pt-32 sm:pt-40 lg:pt-48 max-w-[1440px] mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
             <div className={`mb-6 transition-all duration-[1500ms] ease-out delay-[200ms] ${
               heroVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
             }`}>
-              <span className="text-xs sm:text-sm font-light text-white/80 tracking-[0.3em] uppercase">CONTACT</span>
+              <span className="text-xs sm:text-sm font-light text-white/80 tracking-[0.3em] uppercase">
+                <span className="text-red-500/90">•</span> CONTACT
+              </span>
             </div>
             <h1 className={`font-['Times_New_Roman',serif] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-white mb-6 sm:mb-8 md:mb-10 max-w-4xl leading-[1.1] tracking-[-0.02em] transition-all duration-[1500ms] ease-out ${
               heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             }`}>
               Reach Out Anytime
             </h1>
-            <p className={`text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl leading-[1.8] font-light transition-all duration-[1500ms] ease-out delay-[300ms] ${
+            <p className={`text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl leading-[1.8] font-light text-justify transition-all duration-[1500ms] ease-out delay-[300ms] ${
               heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             }`}>
               For any business inquiries, support requests, or general questions, please contact us.
@@ -80,7 +82,7 @@ const ContactPage = () => {
           className="w-full py-16 sm:py-20 md:py-24 lg:py-28"
           style={{ background: 'linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%)' }}
         >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+          <div className="max-w-[1440px] mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-14 md:gap-16 lg:gap-20">
 
               {/* Left Headings */}
@@ -89,19 +91,19 @@ const ContactPage = () => {
               }`}>
                 <div>
                   <h2 className="text-xs sm:text-xs md:text-sm font-light text-gray-500 mb-8 tracking-[0.2em] uppercase">
-                    • GENERAL INQUIRIES
+                    <span className="text-red-600">•</span> GENERAL INQUIRIES
                   </h2>
                   <div className="h-px w-16 bg-gray-300"></div>
                 </div>
                 <div>
                   <h2 className="text-xs sm:text-xs md:text-sm font-light text-gray-500 mb-8 tracking-[0.2em] uppercase">
-                    • SOCIAL LINKS
+                    <span className="text-red-600">•</span> SOCIAL LINKS
                   </h2>
                   <div className="h-px w-16 bg-gray-300"></div>
                 </div>
                 <div>
                   <h2 className="text-xs sm:text-xs md:text-sm font-light text-gray-500 tracking-[0.2em] uppercase">
-                    • CAREER OPPORTUNITIES
+                    <span className="text-red-600">•</span> CAREER OPPORTUNITIES
                   </h2>
                   <div className="h-px w-16 bg-gray-300 mt-8"></div>
                 </div>
@@ -122,7 +124,7 @@ const ContactPage = () => {
                       info@voith.com.np
                     </a>
                   </p>
-                  <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-[1.85] font-light">
+                  <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-[1.85] font-light text-justify">
                     Registered Office Address:<br />
                     <span className="text-gray-600">Vaidya Energy, VOITH Complex, Ananda Nagar, Dhumbarahi</span><br />
                     <span className="text-gray-600">P.O. BOX: 233/2640, Kathmandu, Nepal</span>
@@ -147,7 +149,7 @@ const ContactPage = () => {
 
                 {/* Career Opportunities */}
                 <div>
-                  <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed font-light">
+                  <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed font-light text-justify">
                     Please send your resume & work sample to:{' '}
                     <a 
                       href="mailto:careers@voith.com.np" 
@@ -166,61 +168,114 @@ const ContactPage = () => {
         {/* Contact Form Section */}
         <section
           ref={formRef}
-          className={`w-full py-16 sm:py-20 md:py-24 lg:py-28 transition-all duration-[1500ms] ease-out ${
+          className={`w-full py-16 sm:py-20 md:py-24 lg:py-32 bg-white transition-all duration-[1500ms] ease-out ${
             contactVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
           }`}
         >
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-gray-900 mb-8">
-              Send Us a Message
-            </h2>
+          <div className="max-w-[1440px] mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="font-['Times_New_Roman',serif] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-gray-900 mb-3 tracking-[-0.02em]">
+                Send Us a Message
+              </h2>
+              <div className="flex items-center justify-center gap-2">
+                <div className="h-px w-12 bg-red-600"></div>
+                <div className="h-1 w-1 rounded-full bg-red-600"></div>
+                <div className="h-px w-12 bg-red-600"></div>
+              </div>
+            </div>
 
-            <form className="grid grid-cols-1 gap-6">
-              <div>
-                <label className="block text-sm font-light text-gray-700 mb-2" htmlFor="name">
-                  Name
+            <form className="max-w-2xl mx-auto space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Name Field */}
+                <div className="group">
+                  <label 
+                    className="block text-sm font-light text-gray-700 mb-2 transition-colors duration-300 group-focus-within:text-red-600" 
+                    htmlFor="name"
+                  >
+                    Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    className="w-full border border-gray-300 rounded-sm px-4 py-3 text-base text-gray-900 font-light bg-white focus:border-red-600 focus:ring-1 focus:ring-red-600 focus:outline-none transition-all duration-300 placeholder:text-gray-400"
+                    placeholder="Your name"
+                  />
+                </div>
+
+                {/* Email Field */}
+                <div className="group">
+                  <label 
+                    className="block text-sm font-light text-gray-700 mb-2 transition-colors duration-300 group-focus-within:text-red-600" 
+                    htmlFor="email"
+                  >
+                    Email *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    className="w-full border border-gray-300 rounded-sm px-4 py-3 text-base text-gray-900 font-light bg-white focus:border-red-600 focus:ring-1 focus:ring-red-600 focus:outline-none transition-all duration-300 placeholder:text-gray-400"
+                    placeholder="your@email.com"
+                  />
+                </div>
+              </div>
+
+              {/* Subject Field */}
+              <div className="group">
+                <label 
+                  className="block text-sm font-light text-gray-700 mb-2 transition-colors duration-300 group-focus-within:text-red-600" 
+                  htmlFor="subject"
+                >
+                  Subject *
                 </label>
                 <input
                   type="text"
-                  id="name"
-                  name="name"
-                  className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-red-600 focus:outline-none transition-all"
-                  placeholder="Your Name"
+                  id="subject"
+                  name="subject"
+                  required
+                  className="w-full border border-gray-300 rounded-sm px-4 py-3 text-base text-gray-900 font-light bg-white focus:border-red-600 focus:ring-1 focus:ring-red-600 focus:outline-none transition-all duration-300 placeholder:text-gray-400"
+                  placeholder="How can we help you?"
                 />
               </div>
 
-              <div>
-                <label className="block text-sm font-light text-gray-700 mb-2" htmlFor="email">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-red-600 focus:outline-none transition-all"
-                  placeholder="your@email.com"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-light text-gray-700 mb-2" htmlFor="message">
-                  Message
+              {/* Message Field */}
+              <div className="group">
+                <label 
+                  className="block text-sm font-light text-gray-700 mb-2 transition-colors duration-300 group-focus-within:text-red-600" 
+                  htmlFor="message"
+                >
+                  Message *
                 </label>
                 <textarea
                   id="message"
                   name="message"
-                  rows={5}
-                  className="w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-red-600 focus:outline-none transition-all"
-                  placeholder="Your message..."
+                  required
+                  rows={6}
+                  className="w-full border border-gray-300 rounded-sm px-4 py-3 text-base text-gray-900 font-light bg-white focus:border-red-600 focus:ring-1 focus:ring-red-600 focus:outline-none transition-all duration-300 resize-none placeholder:text-gray-400"
+                  placeholder="Tell us more about your inquiry..."
                 />
               </div>
 
-              <button
-                type="submit"
-                className="w-full sm:w-auto bg-red-600 text-white font-light px-6 py-3 rounded-md hover:bg-red-700 transition-all duration-300"
-              >
-                Send Message
-              </button>
+              {/* Submit Button */}
+              <div className="pt-4">
+                <button
+                  type="submit"
+                  className="group w-full md:w-auto px-10 py-4 bg-gray-900 text-white text-sm font-light tracking-[0.1em] uppercase rounded-full transition-all duration-300 hover:bg-red-600 hover:shadow-lg hover:shadow-red-600/20 flex items-center justify-center gap-3"
+                >
+                  <span>Send Message</span>
+                  <svg 
+                    className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </button>
+              </div>
             </form>
           </div>
         </section>

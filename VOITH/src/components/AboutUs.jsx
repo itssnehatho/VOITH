@@ -68,9 +68,9 @@ const AboutUs = () => {
 
           <div className={`order-1 lg:order-2 transition-all duration-[1800ms] ease-out delay-[200ms] ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-6'}`}>
             <h2 className={`text-[10px] sm:text-xs md:text-sm font-light text-gray-500 mb-6 sm:mb-8 md:mb-10 tracking-[0.2em] uppercase transition-all duration-[1500ms] ease-out delay-[300ms] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-              {ABOUT_US_CONTENT.title}
+              <span className="text-red-600">•</span> {ABOUT_US_CONTENT.title}
             </h2>
-            <p className={`text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 leading-[1.75] sm:leading-[1.85] mb-8 sm:mb-10 md:mb-12 tracking-[-0.01em] font-light transition-all duration-[1500ms] ease-out delay-[400ms] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+            <p className={`text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 leading-[1.75] sm:leading-[1.85] mb-8 sm:mb-10 md:mb-12 tracking-[-0.01em] font-light text-justify transition-all duration-[1500ms] ease-out delay-[400ms] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
               {ABOUT_US_CONTENT.description} 
             </p>
             <a
@@ -80,7 +80,7 @@ const AboutUs = () => {
                 window.scrollTo(0, 0);
                 window.location.hash = '#about';
               }}
-              className={`group inline-block px-8 sm:px-10 md:px-12 py-3.5 sm:py-4 md:py-5 bg-gray-900 text-white font-light text-xs sm:text-sm uppercase tracking-[0.15em] hover:bg-gray-800 transition-all duration-500 ease-out hover:shadow-xl relative overflow-hidden ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+              className={`group inline-block px-8 sm:px-10 md:px-12 py-3.5 sm:py-4 md:py-5 bg-gray-900 text-white font-light text-xs sm:text-sm uppercase tracking-[0.15em] rounded-full hover:bg-red-600 transition-all duration-500 ease-out hover:shadow-xl relative overflow-hidden ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
               style={{ transitionDelay: '500ms' }}
             >
               <span className="relative z-10">{ABOUT_US_CONTENT.buttonText}</span>

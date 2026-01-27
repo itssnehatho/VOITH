@@ -101,9 +101,9 @@ const AboutPage = () => {
               {/* Center Text */}
               <div className="md:col-span-1 lg:col-span-6 flex flex-col justify-center mt-8 md:mt-0">
                 <h2 className="font-['Times_New_Roman',serif] text-xs sm:text-xs md:text-sm font-normal text-gray-500 mb-8 sm:mb-10 md:mb-12 tracking-[0.2em] uppercase">
-                  • ABOUT US
+                  <span className="text-red-600">•</span> ABOUT US
                 </h2>
-                <p className="font-sans text-sm sm:text-base md:text-lg text-gray-700 leading-[1.85] sm:leading-[1.9] tracking-[0.02em] font-light">
+                <p className="font-sans text-sm sm:text-base md:text-lg text-gray-700 leading-[1.85] sm:leading-[1.9] tracking-[0.02em] font-light text-justify">
                   VOITH or Vaidya's Organization of Industries & Trading Houses is a dynamic business organization in Nepal, dedicated to integrity, excellence, and leadership. We are involved in trading houses, industrial enterprises, services, construction, and educational academies. We prioritize industries that uplift the Nepali people, especially labor-intensive and agro-based sectors, creating sustainable growth and national impact.
                 </p>
               </div>
@@ -131,17 +131,17 @@ const AboutPage = () => {
 
               <div className="md:w-1/3">
                 <h2 className="font-['Times_New_Roman',serif] text-xs sm:text-xs md:text-sm font-normal text-gray-500 tracking-[0.2em] uppercase">
-                  • OUR VALUES
+                  <span className="text-red-600">•</span> OUR VALUES
                 </h2>
               </div>
 
               <div className="md:w-2/3 space-y-10 sm:space-y-12 md:space-y-14 lg:space-y-16">
                 {["VISION", "MISSION", "MISSION"].map((title, idx) => (
-                  <div key={idx} className="border-l-2 border-gray-200 pl-4 sm:pl-6 md:pl-8">
+                  <div key={idx} className="border-l-2 border-red-600/30 pl-4 sm:pl-6 md:pl-8">
                     <h3 className="font-['Times_New_Roman',serif] text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light text-gray-900 mb-4 sm:mb-5 md:mb-6 tracking-[-0.02em]">
                       {title}
                     </h3>
-                    <p className="font-sans text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 leading-[1.8] sm:leading-[1.85] tracking-[-0.01em] font-light">
+                    <p className="font-sans text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 leading-[1.8] sm:leading-[1.85] tracking-[-0.01em] font-light text-justify">
                       VOITH or Vaidya's Organization of Industries & Trading Houses is a dynamic business organization in Nepal, dedicated to integrity, excellence, and leadership. We represent integrated trading houses and industrial enterprises committed to Nepal's development.
                     </p>
                   </div>

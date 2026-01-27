@@ -48,21 +48,24 @@ const GalleryPage = () => {
 
         {/* Title Section */}
         <section className="relative w-full pt-24 sm:pt-28 md:pt-32 lg:pt-40 pb-12 sm:pb-16 md:pb-20">
-          <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
-            <h1
-              ref={titleRef}
-              className={`font-['Times_New_Roman',serif] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-gray-900 tracking-tight uppercase transition-all duration-[1500ms] ease-out ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-              }`}
-            >
-              GALLERY
-            </h1>
+          <div className="max-w-[1440px] mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+            <div>
+              <h1
+                ref={titleRef}
+                className={`font-['Times_New_Roman',serif] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-gray-900 tracking-tight uppercase transition-all duration-[1500ms] ease-out ${
+                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+                }`}
+              >
+                GALLERY
+              </h1>
+              <div className="h-px w-20 bg-gradient-to-r from-red-600 to-transparent mt-4"></div>
+            </div>
           </div>
         </section>
 
         {/* Gallery Section */}
         <section ref={imagesRef} className="w-full pb-20 sm:pb-24 md:pb-32 lg:pb-36 xl:pb-40">
-          <div className="w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 space-y-8 sm:space-y-10 md:space-y-12">
+          <div className="max-w-[1440px] mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 space-y-8 sm:space-y-10 md:space-y-12">
 
             {/* Top Row */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 md:gap-10 lg:gap-12">

@@ -52,21 +52,24 @@ const OurWorkPage = () => {
       
       {/* Hero Section with Title */}
       <section className="relative w-full pt-24 sm:pt-28 md:pt-32 lg:pt-40 pb-16 sm:pb-20 md:pb-24">
-        <div className="w-full px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 mx-auto">
-          <h1
-            ref={titleRef}
-            className={`font-['Times_New_Roman',serif] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-gray-900 tracking-tight transition-all duration-[1500ms] ease-out ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-            }`}
-          >
-            OUR WORK
-          </h1>
+        <div className="max-w-[1440px] mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+          <div>
+            <h1
+              ref={titleRef}
+              className={`font-['Times_New_Roman',serif] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-gray-900 tracking-tight transition-all duration-[1500ms] ease-out ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+              }`}
+            >
+              OUR WORK
+            </h1>
+            <div className="h-px w-20 bg-gradient-to-r from-red-600 to-transparent mt-4"></div>
+          </div>
         </div>
       </section>
 
       {/* Projects Grid Section */}
       <section ref={projectsRef} className="w-full pb-16 sm:pb-20 md:pb-24 lg:pb-32 xl:pb-40">
-        <div className="w-full px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 mx-auto">
+        <div className="max-w-[1440px] mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 lg:gap-12">
             {/* Repeat all projects */}
             {[
