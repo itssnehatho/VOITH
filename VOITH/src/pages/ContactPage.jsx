@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const ContactPage = () => {
   const [pageLoaded, setPageLoaded] = useState(false);
@@ -40,34 +41,35 @@ const ContactPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#FAF5ED] overflow-hidden relative">
-      <div className="relative">
+    <div className="page-root min-h-screen bg-[#FAF5ED] relative overflow-anchor-none">
+      <div className="relative overflow-anchor-none">
         <Header />
 
-        {/* Hero Section */}
-        <section className="relative w-full h-screen overflow-hidden">
+        {/* Hero Section - no overflow-hidden on section so first scroll registers on document */}
+        <section className="relative w-full min-h-[100vh] flex flex-col">
           <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            className="absolute inset-0 overflow-hidden bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: "url('/homepage.jpg')" }}
+            aria-hidden
           >
             <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/70 to-black/80"></div>
           </div>
 
-          {/* Hero Content */}
-          <div className="relative z-10 h-full flex flex-col justify-center pt-32 sm:pt-40 lg:pt-48 max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
-            <div className={`mb-6 transition-all duration-[1500ms] ease-out delay-[200ms] ${
-              heroVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
+          {/* Hero Content - aligned near bottom, entrance like homepage */}
+          <div className="relative z-10 flex-1 flex flex-col justify-end pt-32 sm:pt-40 lg:pt-48 pb-14 sm:pb-16 md:pb-20 lg:pb-24 xl:pb-28 max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 w-full">
+            <div className={`mb-6 transition-all duration-[1800ms] ease-out delay-[200ms] ${
+              heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             }`}>
               <span className="text-xs sm:text-sm font-light text-white/80 tracking-[0.3em] uppercase">
                 <span className="text-red-600">•</span> CONTACT
               </span>
             </div>
-            <h1 className={`font-['Times_New_Roman',serif] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-white mb-6 sm:mb-8 md:mb-10 max-w-4xl leading-[1.1] tracking-[-0.02em] transition-all duration-[1500ms] ease-out ${
+            <h1 className={`font-['Times_New_Roman',serif] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-white mb-3 sm:mb-4 md:mb-5 max-w-4xl leading-[1.1] tracking-[-0.02em] transition-all duration-[1800ms] ease-out ${
               heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             }`}>
               Reach Out Anytime
             </h1>
-            <p className={`text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl leading-[1.8] font-light text-justify transition-all duration-[1500ms] ease-out delay-[300ms] ${
+            <p className={`text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl leading-[1.8] font-light text-justify transition-all duration-[1800ms] ease-out delay-[300ms] ${
               heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             }`}>
               For any business inquiries, support requests, or general questions, please contact us.
@@ -86,8 +88,8 @@ const ContactPage = () => {
             <div className="space-y-12 sm:space-y-14 md:space-y-16 lg:space-y-20">
 
               {/* General Inquiries Row */}
-              <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 lg:gap-20 items-start transition-all duration-[1500ms] ease-out ${
-                contactVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-6'
+              <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 lg:gap-20 items-start transition-opacity duration-[1500ms] ease-out ${
+                contactVisible ? 'opacity-100' : 'opacity-0'
               }`}>
                 <div>
                   <h2 className="text-xs sm:text-xs md:text-sm font-light text-gray-500 mb-8 tracking-[0.2em] uppercase">
@@ -113,8 +115,8 @@ const ContactPage = () => {
               </div>
 
               {/* Social Links Row */}
-              <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 lg:gap-20 items-center transition-all duration-[1500ms] ease-out delay-[200ms] ${
-                contactVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-6'
+              <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 lg:gap-20 items-center transition-opacity duration-[1500ms] ease-out delay-[200ms] ${
+                contactVisible ? 'opacity-100' : 'opacity-0'
               }`}>
                 <div>
                   <h2 className="text-xs sm:text-xs md:text-sm font-light text-gray-500 tracking-[0.2em] uppercase">
@@ -138,8 +140,8 @@ const ContactPage = () => {
               </div>
 
               {/* Career Opportunities Row */}
-              <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 lg:gap-20 items-start transition-all duration-[1500ms] ease-out delay-[400ms] ${
-                contactVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-6'
+              <div className={`grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 lg:gap-20 items-start transition-opacity duration-[1500ms] ease-out delay-[400ms] ${
+                contactVisible ? 'opacity-100' : 'opacity-0'
               }`}>
                 <div>
                   <h2 className="text-xs sm:text-xs md:text-sm font-light text-gray-500 tracking-[0.2em] uppercase">
@@ -169,8 +171,8 @@ const ContactPage = () => {
         {/* Contact Form Section */}
         <section
           ref={formRef}
-          className={`w-full py-16 sm:py-20 md:py-24 lg:py-32 bg-[#FDFBF8] transition-all duration-[1500ms] ease-out ${
-            contactVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+          className={`w-full py-16 sm:py-20 md:py-24 lg:py-32 bg-[#FDFBF8] transition-opacity duration-[1500ms] ease-out ${
+            contactVisible ? 'opacity-100' : 'opacity-0'
           }`}
         >
           <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
@@ -280,6 +282,8 @@ const ContactPage = () => {
             </form>
           </div>
         </section>
+
+        <Footer />
       </div>
 
       {/* Curtain Loading */}

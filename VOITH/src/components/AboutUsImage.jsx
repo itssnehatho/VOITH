@@ -116,7 +116,6 @@ const AboutUsImage = () => {
 
   return (
     <section ref={sectionRef} className="w-full relative">
-
       {/* Mobile Layout */}
       <div className="md:hidden">
         {images.map((image, index) => (
@@ -160,7 +159,6 @@ const AboutUsImage = () => {
 
       {/* Desktop Layout */}
       <div ref={wrapperRef} className="hidden md:block relative w-full h-screen overflow-hidden">
-
         {/* Neutral Background Applied Here */}
         <div
           ref={textPanelRef}

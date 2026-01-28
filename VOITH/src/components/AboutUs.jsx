@@ -48,7 +48,7 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full bg-[#FDFBF8] py-20 sm:py-24 md:py-28 lg:py-32 xl:py-40">
+    <section ref={sectionRef} className="w-full bg-[#FDFBF8] py-20 sm:py-24 md:py-28 lg:py-32 xl:py-40 overflow-anchor-none">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 xl:gap-20 items-center">
 

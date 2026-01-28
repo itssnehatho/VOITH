@@ -23,6 +23,11 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  overflow-anchor: none; /* prevent viewport jump when content animates */
+}
+
 html,
 body {
   margin: 0;
@@ -60,4 +65,13 @@ body {
   to {
     transform: rotate(0deg);
   }
+}
+
+.overflow-anchor-none {
+  overflow-anchor: none;
+}
+
+.page-root {
+  min-height: 100vh;
+  isolation: isolate;
 }

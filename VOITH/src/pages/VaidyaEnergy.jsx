@@ -6,7 +6,8 @@ const VaidyaEnergy = () => {
     };
 
     return (
-        <section className="featured-in flex flex-col md:flex-row w-full h-screen relative">
+        <div className="page-root min-h-screen bg-[#FAF5ED] overflow-anchor-none">
+        <section className="featured-in flex flex-col md:flex-row w-full min-h-screen relative">
             <button
                 onClick={goHome}
                 className="absolute top-4 right-4 text-white font-bold text-2xl flex items-center justify-center hover:text-red-600 transition-colors duration-300 z-20"
@@ -52,6 +53,7 @@ const VaidyaEnergy = () => {
                 />
             </div>
         </section>
+        </div>
     );
 };
 

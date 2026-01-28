@@ -6,7 +6,8 @@ const Pitstop = () => {
     };
 
     return (
-        <section className="featured-in flex flex-col md:flex-row w-full h-screen relative">
+        <div className="page-root min-h-screen bg-[#FAF5ED] overflow-anchor-none">
+        <section className="featured-in flex flex-col md:flex-row w-full min-h-screen relative">
 
             <button
                 onClick={goHome}
@@ -55,6 +56,7 @@ const Pitstop = () => {
                 />
             </div>
         </section>
+        </div>
     );
 };
 

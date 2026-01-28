@@ -6,7 +6,6 @@ const OurWorkPage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [pageLoaded, setPageLoaded] = useState(false);
   const [curtainUp, setCurtainUp] = useState(false);
-  const [projectsVisible, setProjectsVisible] = useState(false);
   const titleRef = useRef(null);
   const projectsRef = useRef(null);
 
@@ -18,36 +17,16 @@ const OurWorkPage = () => {
   }, []);
 
   useEffect(() => {
-    setTimeout(() => {
-      setIsVisible(true);
-    }, 2500);
-  }, []);
+    if (!curtainUp) return;
+    const t = setTimeout(() => setIsVisible(true), 200);
+    return () => clearTimeout(t);
+  }, [curtainUp]);
 
-  useEffect(() => {
-    if (!isVisible) return;
-    
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setProjectsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (projectsRef.current) {
-      observer.observe(projectsRef.current); 
-    }
-
-    return () => {
-      if (projectsRef.current) {
-        observer.unobserve(projectsRef.current);
-      }
-    };
-  }, [isVisible]);
+  // No scroll-based reveal animations for project cards (title only animates)
 
   return (
-    <div className="min-h-screen bg-[#FAF5ED] relative">
+    <div className="page-root min-h-screen bg-[#FAF5ED] relative overflow-anchor-none">
+      <div className="relative overflow-anchor-none">
       <Header />
       
       {/* Hero Section with Title */}
@@ -56,8 +35,8 @@ const OurWorkPage = () => {
           <div>
             <h1
               ref={titleRef}
-              className={`font-['Times_New_Roman',serif] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-gray-900 tracking-tight transition-all duration-[1500ms] ease-out ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+              className={`font-['Times_New_Roman',serif] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-gray-900 tracking-tight transition-all duration-[1800ms] ease-out ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
               }`}
             >
               OUR WORK
@@ -68,7 +47,7 @@ const OurWorkPage = () => {
       </section>
 
       {/* Projects Grid Section */}
-      <section ref={projectsRef} className="w-full pb-16 sm:pb-20 md:pb-24 lg:pb-32 xl:pb-40">
+      <section ref={projectsRef} className="w-full pb-16 sm:pb-20 md:pb-24 lg:pb-32 xl:pb-40 overflow-anchor-none">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 lg:gap-12">
             {/* Repeat all projects */}
@@ -121,9 +100,7 @@ const OurWorkPage = () => {
             ].map((project, index) => (
               <div
                 key={index}
-                className={`group transition-all duration-1000 delay-${100 * (index + 1)} ${
-                  projectsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
-                }`}
+                className="group"
               >
                 <div className="relative w-full h-[220px] sm:h-[250px] md:h-[300px] lg:h-[350px] xl:h-[400px] overflow-hidden mb-4 sm:mb-6 rounded-sm">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10"></div>
@@ -149,6 +126,7 @@ const OurWorkPage = () => {
       </section>
 
       <Footer />
+      </div>
 
       {/* Curtain Animation */}
       <div

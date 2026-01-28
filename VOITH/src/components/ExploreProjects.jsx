@@ -65,7 +65,7 @@ const ExploreProjects = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="w-full bg-gradient-to-b from-[#FAF5ED] to-[#FDFBF8] pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-40 pb-12 sm:pb-16 md:pb-20">
+    <section ref={sectionRef} className="w-full bg-gradient-to-b from-[#FAF5ED] to-[#FDFBF8] pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-40 pb-12 sm:pb-16 md:pb-20 overflow-anchor-none">
       {/* Container aligned  */}
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         <div>

@@ -37,7 +37,7 @@ const Quotes = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="w-full bg-gradient-to-b from-[#FDFBF8] via-[#FAF5ED] to-[#FDFBF8] pt-24 sm:pt-28 md:pt-32 lg:pt-40 xl:pt-48 pb-12 sm:pb-16 md:pb-20 lg:pb-24">
+    <section ref={sectionRef} className="w-full bg-gradient-to-b from-[#FDFBF8] via-[#FAF5ED] to-[#FDFBF8] pt-24 sm:pt-28 md:pt-32 lg:pt-40 xl:pt-48 pb-12 sm:pb-16 md:pb-20 lg:pb-24 overflow-anchor-none">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         <div className={`transition-all duration-[1800ms] ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           {quotes.map((quote, index) => (
