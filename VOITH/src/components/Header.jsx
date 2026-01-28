@@ -202,7 +202,7 @@ const Header = () => {
         </div>
       )}
 
-      {/* Desktop Projects Menu — off-white bg, 3 projects */}
+      {/* Desktop Projects Menu  */}
       {isDesktopMenuOpen && (
         <>
           <div 

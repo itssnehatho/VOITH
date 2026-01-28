@@ -49,7 +49,7 @@ const Toyota = () => {
 
             <div className="image-section md:w-1/2 w-full h-screen relative">
                 <img
-                    src="/toyota.png"
+                    src="/home2.png"
                     alt="Toyota Nepal — United Traders Syndicate"
                     className="absolute inset-0 w-full h-full object-cover"
                 />
