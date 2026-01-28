@@ -68,7 +68,7 @@ const Footer = () => {
             </p>
             <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
               Registered Office Address<br />
-              Vaidya Energy, VOITH Complex,<br />
+              VOITH Complex,<br />
               Ananda Nagar, Dhumbarahi<br />
               P.O. BOX: 233/2640,<br />
               Kathmandu, Nepal

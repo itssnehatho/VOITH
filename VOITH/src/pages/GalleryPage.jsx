@@ -62,7 +62,7 @@ const GalleryPage = () => {
       <div className="relative overflow-anchor-none">
         <Header />
 
-        {/* Title — same as before */}
+        {/* Title  */}
         <section className="relative w-full pt-24 sm:pt-28 md:pt-32 lg:pt-40 pb-12 sm:pb-16 md:pb-20">
           <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
             <div>
@@ -79,7 +79,7 @@ const GalleryPage = () => {
           </div>
         </section>
 
-        {/* Gallery — same layout and transition, overflow-anchor-none for stability */}
+        {/* Gallery */}
         <section
           ref={imagesRef}
           className="w-full pb-20 sm:pb-24 md:pb-32 lg:pb-36 xl:pb-40 overflow-anchor-none"
@@ -146,7 +146,7 @@ const GalleryPage = () => {
         <Footer />
       </div>
 
-      {/* Curtain — same as before */}
+      {/* Curtain  */}
       <div
         className={`fixed inset-0 bg-white z-[9999] pointer-events-none transition-all duration-[1000ms] ease-out flex flex-col items-center justify-center ${
           curtainUp ? '-translate-y-full' : 'translate-y-0'

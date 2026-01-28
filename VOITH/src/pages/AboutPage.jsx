@@ -109,12 +109,12 @@ const AboutPage = () => {
           </div>
         </section>
 
-        {/* About Us Section — one hero image, editorial layout, padding-aligned */}
+        {/* About Us Section */}
         <section className="w-full bg-[#FDFBF8] py-16 sm:py-20 md:py-24 lg:py-32 xl:py-40">
           <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12 lg:gap-16 xl:gap-20 items-center">
 
-              {/* Single hero image — left on desktop, top on mobile */}
+              {/* Single hero image */}
               <div ref={aboutImageRef} className="order-2 lg:order-1">
                 <div className={`relative overflow-hidden transition-opacity duration-[1500ms] ease-out group ${aboutImageVisible ? 'opacity-100' : 'opacity-0'}`}>
                   <div className="relative aspect-[4/5] lg:aspect-[3/4]">
@@ -129,7 +129,7 @@ const AboutPage = () => {
                 </div>
               </div>
 
-              {/* Text content — right on desktop */}
+              {/* Text content  */}
               <div className="order-1 lg:order-2 lg:py-4">
                 <div className="flex items-center gap-3 mb-6 sm:mb-8">
                   <span className="h-px w-8 sm:w-12 bg-red-600" aria-hidden />
@@ -167,7 +167,7 @@ const AboutPage = () => {
           </div>
         </section>
 
-        {/* Our Values Section — scroll reveal: Vision, then Mission, then Values (opacity-only to avoid viewport jump) */}
+        {/* Our Values Section */}
         <section className="w-full bg-[#FAF5ED] py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32 border-t border-gray-100 overflow-anchor-none">
           <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
             <div className="flex flex-col md:flex-row md:items-start gap-8 sm:gap-10 md:gap-12 lg:gap-16">
@@ -219,7 +219,7 @@ const AboutPage = () => {
           </div>
         </section>
 
-        {/* Explore Projects — opacity-only entrance (no translate) so scroll doesn’t jump */}
+        {/* Explore Projects */}
         <section ref={exploreRef} className="w-full bg-[#FAF5ED] py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32 border-t border-gray-100 overflow-anchor-none">
           <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
             <div className={`transition-opacity duration-[1200ms] ease-out ${exploreVisible ? 'opacity-100' : 'opacity-0'}`}>

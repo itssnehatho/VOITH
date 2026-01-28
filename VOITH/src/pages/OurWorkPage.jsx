@@ -22,7 +22,6 @@ const OurWorkPage = () => {
     return () => clearTimeout(t);
   }, [curtainUp]);
 
-  // No scroll-based reveal animations for project cards (title only animates)
 
   return (
     <div className="page-root min-h-screen bg-[#FAF5ED] relative overflow-anchor-none">
@@ -50,7 +49,7 @@ const OurWorkPage = () => {
       <section ref={projectsRef} className="w-full pb-16 sm:pb-20 md:pb-24 lg:pb-32 xl:pb-40 overflow-anchor-none">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 lg:gap-12">
-            {/* Repeat all projects */}
+            
             {[
               {
                 title: 'RESIDENTIAL PROJECTS',
