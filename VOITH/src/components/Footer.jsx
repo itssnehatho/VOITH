@@ -12,7 +12,6 @@ const Footer = () => {
                 href="#work" 
                 onClick={(e) => {
                   e.preventDefault();
-                  window.scrollTo(0, 0);
                   window.location.hash = '#work';
                 }}
                 className="text-sm sm:text-base text-gray-600 hover:text-red-600 transition-colors"
@@ -21,7 +20,6 @@ const Footer = () => {
                 href="#gallery" 
                 onClick={(e) => {
                   e.preventDefault();
-                  window.scrollTo(0, 0);
                   window.location.hash = '#gallery';
                 }}
                 className="text-sm sm:text-base text-gray-600 hover:text-red-600 transition-colors"
@@ -30,7 +28,6 @@ const Footer = () => {
                 href="#about" 
                 onClick={(e) => {
                   e.preventDefault();
-                  window.scrollTo(0, 0);
                   window.location.hash = '#about';
                 }}
                 className="text-sm sm:text-base text-gray-600 hover:text-red-600 transition-colors"
@@ -39,7 +36,6 @@ const Footer = () => {
                 href="#contact" 
                 onClick={(e) => {
                   e.preventDefault();
-                  window.scrollTo(0, 0);
                   window.location.hash = '#contact';
                 }}
                 className="text-sm sm:text-base text-gray-600 hover:text-red-600 transition-colors"

@@ -77,7 +77,6 @@ const AboutUs = () => {
               href="#about"
               onClick={(e) => {
                 e.preventDefault();
-                window.scrollTo(0, 0);
                 window.location.hash = '#about';
               }}
               className={`group inline-block px-6 sm:px-7 md:px-8 py-3 sm:py-3.5 md:py-4 bg-transparent border border-gray-900 text-gray-900 font-light text-xs sm:text-sm uppercase tracking-[0.15em] rounded-full hover:bg-red-600 hover:border-red-600 hover:text-white transition-all duration-300 ease-out hover:shadow-xl relative overflow-hidden ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}

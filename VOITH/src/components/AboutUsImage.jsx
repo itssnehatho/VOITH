@@ -9,6 +9,7 @@ const images = ['/home2.png', '/homepage.jpg', '/home2.png'];
 const AboutUsImage = () => {
   const sectionRef = useRef(null);
   const wrapperRef = useRef(null);
+  const scrollHeightRef = useRef(null);
   const imageContainerRef = useRef(null);
   const trackRef = useRef(null);
   const textPanelRef = useRef(null);
@@ -20,7 +21,10 @@ const AboutUsImage = () => {
     if (isMobile) return;
 
     const timer = setTimeout(() => {
-      if (!sectionRef.current || !wrapperRef.current || !imageContainerRef.current) return;
+      if (!sectionRef.current || !wrapperRef.current || !scrollHeightRef.current || !imageContainerRef.current) return;
+
+      const totalScrollDistance = (images.length + 1) * window.innerHeight;
+      scrollHeightRef.current.style.height = `${totalScrollDistance}px`;
 
       const ctx = gsap.context(() => {
         if (trackRef.current) {
@@ -37,29 +41,13 @@ const AboutUsImage = () => {
         };
         window.addEventListener('resize', updateMeasurements);
 
-        const totalScrollDistance = (images.length + 1) * window.innerHeight;
         const slidePhaseEnd = 0.15;
 
         ScrollTrigger.create({
-          trigger: sectionRef.current,
+          trigger: scrollHeightRef.current,
           start: 'top top',
-          end: `+=${totalScrollDistance}`,
-          pin: true,
+          end: 'bottom top',
           scrub: 2,
-          pinSpacing: true,
-          ease: 'power1.out',
-          snap: {
-            snapTo: (value) => {
-              if (value <= slidePhaseEnd) return value;
-              const totalImages = images.length;
-              const lastIndex = Math.max(1, totalImages - 1);
-              const cycle = (value - slidePhaseEnd) / (1 - slidePhaseEnd);
-              const snappedCycle = gsap.utils.snap(1 / lastIndex, cycle);
-              return slidePhaseEnd + snappedCycle * (1 - slidePhaseEnd);
-            },
-            duration: 0.35,
-            ease: 'power2.out',
-          },
           onUpdate: (self) => {
             const progress = self.progress;
 
@@ -109,7 +97,7 @@ const AboutUsImage = () => {
         window.removeEventListener('resize', updateMeasurements);
         ctx.revert();
       };
-    }, 100);
+    }, 150);
 
     return () => clearTimeout(timer);
   }, []);
@@ -157,8 +145,10 @@ const AboutUsImage = () => {
         ))}
       </div>
 
-      {/* Desktop Layout */}
-      <div ref={wrapperRef} className="hidden md:block relative w-full h-screen overflow-hidden">
+      {/* Desktop Layout: fixed-height scroll area + sticky content so ScrollTrigger has no pin/snap */}
+      <div ref={wrapperRef} className="hidden md:block relative w-full">
+        <div ref={scrollHeightRef} className="relative w-full" style={{ minHeight: '100vh' }}>
+          <div className="sticky top-0 left-0 w-full h-screen overflow-hidden">
         {/* Neutral Background Applied Here */}
         <div
           ref={textPanelRef}
@@ -223,6 +213,8 @@ const AboutUsImage = () => {
             <span className="text-sm font-light">{currentIndex + 1}</span>
             <span className="text-white/50">/</span>
             <span className="text-sm font-light text-white/70">{images.length}</span>
+          </div>
+        </div>
           </div>
         </div>
       </div>
