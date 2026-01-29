@@ -109,7 +109,8 @@ const ContactPage = () => {
                   <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-[1.85] font-light text-justify">
                     Registered Office Address:<br />
                     <span className="text-gray-600">VOITH Complex, Ananda Nagar, Dhumbarahi</span><br />
-                    <span className="text-gray-600">P.O. BOX: 233/2640, Kathmandu, Nepal</span>
+                    <span className="text-gray-600">P.O. BOX: 233/2640</span><br />
+                    <span className="text-gray-600">Kathmandu, Nepal</span>
                   </p>
                 </div>
               </div>
