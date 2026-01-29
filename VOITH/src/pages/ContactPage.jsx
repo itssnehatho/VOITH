@@ -45,7 +45,7 @@ const ContactPage = () => {
       <div className="relative overflow-anchor-none">
         <Header />
 
-        {/* Hero Section - no overflow-hidden on section so first scroll registers on document */}
+        {/* Hero Section  */}
         <section className="relative w-full min-h-[100vh] flex flex-col">
           <div
             className="absolute inset-0 overflow-hidden bg-cover bg-center bg-no-repeat"
@@ -55,7 +55,7 @@ const ContactPage = () => {
             <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/70 to-black/80"></div>
           </div>
 
-          {/* Hero Content - aligned near bottom, entrance like homepage */}
+          {/* Hero Content */}
           <div className="relative z-10 flex-1 flex flex-col justify-end pt-32 sm:pt-40 lg:pt-48 pb-14 sm:pb-16 md:pb-20 lg:pb-24 xl:pb-28 max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 w-full">
             <div className={`mb-6 transition-all duration-[1800ms] ease-out delay-[200ms] ${
               heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
@@ -108,7 +108,7 @@ const ContactPage = () => {
                   </p>
                   <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-[1.85] font-light text-justify">
                     Registered Office Address:<br />
-                    <span className="text-gray-600">Vaidya Energy, VOITH Complex, Ananda Nagar, Dhumbarahi</span><br />
+                    <span className="text-gray-600">VOITH Complex, Ananda Nagar, Dhumbarahi</span><br />
                     <span className="text-gray-600">P.O. BOX: 233/2640, Kathmandu, Nepal</span>
                   </p>
                 </div>
