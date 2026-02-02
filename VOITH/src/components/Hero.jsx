@@ -1,7 +1,10 @@
 import { useEffect, useState, useRef } from 'react';
+import { useContent } from '../context/ContentContext';
 import { HERO_CONTENT } from '../constants';
 
 const Hero = () => {
+  const { content } = useContent();
+  const heroContent = content?.hero ?? HERO_CONTENT;
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
@@ -24,12 +27,12 @@ const Hero = () => {
         <div className="max-w-4xl lg:max-w-5xl relative w-full">
           {/* Headline  */}
           <h1 className={`font-['Times_New_Roman',serif] text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light text-white mb-3 sm:mb-4 md:mb-5 leading-[1.1] tracking-[-0.03em] transition-all duration-[1800ms] ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-            {HERO_CONTENT.title}
+            {heroContent.title}
           </h1>
           
           {/* Body  */}
           <p className={`text-sm sm:text-base md:text-lg lg:text-xl text-white/95 max-w-3xl lg:max-w-4xl leading-[1.75] sm:leading-[1.85] font-light tracking-[-0.01em] text-justify transition-all duration-[1800ms] ease-out delay-[300ms] mb-4 sm:mb-5 md:mb-6 lg:mb-8 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-            {HERO_CONTENT.description}
+            {heroContent.description}
           </p>
           
           {/* Exp Button  */}

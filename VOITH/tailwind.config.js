@@ -11,8 +11,12 @@ export default {
       },
       letterSpacing: {
         'extra-wide': '0.15em',
-        'wide': '0.1em',
-        'tight': '-0.01em',
+        wide: '0.1em',
+        tight: '-0.01em',
+      },
+      maxWidth: {
+        site: '1440px',
+        content: '1200px',
       },
     },
   },

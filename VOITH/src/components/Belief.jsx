@@ -1,7 +1,10 @@
 import { useEffect, useState, useRef } from 'react';
+import { useContent } from '../context/ContentContext';
 import { BELIEF_TEXT } from '../constants';
 
 const Belief = () => {
+  const { content } = useContent();
+  const beliefText = typeof content?.belief === 'string' ? content.belief : BELIEF_TEXT;
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
   const hasAnimated = useRef(false);
@@ -26,7 +29,7 @@ const Belief = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full bg-gradient-to-b from-[#FDFBF8] via-[#FAF5ED] to-[#FDFBF8] min-h-screen flex items-center justify-center py-20 sm:py-24 md:py-28 lg:py-32 xl:py-40 overflow-anchor-none">
+    <section ref={sectionRef} className="w-full bg-gradient-to-b from-[#FFFBF5] via-[#FFFBF5] to-[#FFFBF5] min-h-screen flex items-center justify-center py-20 sm:py-24 md:py-28 lg:py-32 xl:py-40 overflow-anchor-none">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 text-center">
         <div className="flex justify-center mb-12 sm:mb-14 md:mb-16 lg:mb-20 xl:mb-24">
           <div className={`flex items-center justify-center transition-all duration-[2000ms] ease-out ${isVisible ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 translate-y-8'}`}>
@@ -39,7 +42,7 @@ const Belief = () => {
         </div>
         
         <p className={`text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-gray-700 leading-[1.8] sm:leading-[1.9] max-w-4xl mx-auto uppercase tracking-[0.08em] font-light transition-all duration-[1800ms] ease-out delay-[300ms] ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-          <span className="text-red-600/80">{BELIEF_TEXT.split(' ')[0]}</span> {BELIEF_TEXT.split(' ').slice(1).join(' ')}
+          <span className="text-[#E85244]/80">{beliefText.split(' ')[0]}</span> {beliefText.split(' ').slice(1).join(' ')}
         </p>
       </div>
     </section>

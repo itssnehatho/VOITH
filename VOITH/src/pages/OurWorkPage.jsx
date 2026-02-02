@@ -24,7 +24,7 @@ const OurWorkPage = () => {
 
 
   return (
-    <div className="page-root min-h-screen bg-[#FAF5ED] relative overflow-anchor-none">
+    <div className="page-root min-h-screen bg-[#FFFBF5] relative overflow-anchor-none">
       <div className="relative overflow-anchor-none">
       <Header />
       
@@ -40,7 +40,7 @@ const OurWorkPage = () => {
             >
               OUR WORK
             </h1>
-            <div className="h-px w-20 bg-gradient-to-r from-red-600 to-transparent mt-4"></div>
+            <div className="h-px w-20 bg-gradient-to-r from-[#E85244] to-transparent mt-4"></div>
           </div>
         </div>
       </section>
@@ -116,7 +116,7 @@ const OurWorkPage = () => {
                   <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-light text-gray-800 tracking-tight uppercase">
                     {project.title}
                   </p>
-                  <div className="mt-3 h-0.5 w-0 bg-red-600 group-hover:w-full transition-all duration-700"></div>
+                  <div className="mt-3 h-0.5 w-0 bg-[#E85244] group-hover:w-full transition-all duration-700"></div>
                 </div>
               </div>
             ))}
@@ -129,7 +129,7 @@ const OurWorkPage = () => {
 
       {/* Curtain Animation */}
       <div
-        className={`fixed inset-0 bg-white z-[9999] pointer-events-none transition-all duration-[1000ms] ease-out flex flex-col items-center justify-center ${
+        className={`fixed inset-0 bg-[#FFFBF5] z-[9999] pointer-events-none transition-all duration-[1000ms] ease-out flex flex-col items-center justify-center ${
           curtainUp ? '-translate-y-full' : 'translate-y-0'
         }`}
       >

@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import Hero from '../components/Hero';
 import FeaturedIn from '../components/FeaturedIn';
 import Belief from '../components/Belief';
-import AboutUsImage from '../components/AboutUsImage';
+import EditorialScrollSection from '../components/EditorialScrollSection';
 import Quotes from '../components/Quotes';
 import AboutUs from '../components/AboutUs';
 import ExploreProjects from '../components/ExploreProjects';
@@ -21,7 +21,7 @@ const Homepage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#FAF5ED] relative">
+    <div className="min-h-screen bg-[#FFFBF5] relative">
       <div className="relative">
         <Header />
         <div className="relative w-full h-screen overflow-hidden">
@@ -31,13 +31,13 @@ const Homepage = () => {
           </div>
         </div>
         <Belief />
-        <AboutUsImage />
+        <EditorialScrollSection />
         <Quotes /> 
         <AboutUs />
         <ExploreProjects />
         <Footer />
       </div>
-      <div className={`fixed inset-0 bg-white z-[9999] pointer-events-none transition-all duration-[1000ms] ease-out flex flex-col items-center justify-center ${
+      <div className={`fixed inset-0 bg-[#FFFBF5] z-[9999] pointer-events-none transition-all duration-[1000ms] ease-out flex flex-col items-center justify-center ${
         curtainUp ? '-translate-y-full' : 'translate-y-0'
       }`}>
         <img 

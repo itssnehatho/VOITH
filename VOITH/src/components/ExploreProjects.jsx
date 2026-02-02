@@ -65,15 +65,14 @@ const ExploreProjects = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="w-full bg-gradient-to-b from-[#FAF5ED] to-[#FDFBF8] pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-40 pb-12 sm:pb-16 md:pb-20 overflow-anchor-none">
-      {/* Container aligned  */}
+    <section ref={sectionRef} className="w-full bg-gradient-to-b from-[#FFFBF5] to-[#FFFBF5] pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-40 pb-12 sm:pb-16 md:pb-20 overflow-anchor-none">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         <div>
           <h2 className={`font-['Times_New_Roman',serif] text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light text-gray-900 tracking-[-0.03em] uppercase mb-4 transition-all duration-[1800ms] ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-            <span className={`inline-block transition-all duration-[1500ms] ease-out delay-[100ms] hover:text-red-600 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-6'}`}>EXPLORE</span>{' '}
-            <span className={`inline-block transition-all duration-[1500ms] ease-out delay-[300ms] hover:text-red-600 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-6'}`}>PROJECTS</span>
+            <span className={`inline-block transition-all duration-[1500ms] ease-out delay-[100ms] hover:text-[#E85244] ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-6'}`}>EXPLORE</span>{' '}
+            <span className={`inline-block transition-all duration-[1500ms] ease-out delay-[300ms] hover:text-[#E85244] ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-6'}`}>PROJECTS</span>
           </h2>
-          <div className="h-px w-24 bg-gradient-to-r from-red-600 to-transparent mb-16 sm:mb-20 md:mb-24 lg:mb-28 xl:mb-32"></div>
+          <div className="h-px w-24 bg-gradient-to-r from-[#E85244] to-transparent mb-16 sm:mb-20 md:mb-24 lg:mb-28 xl:mb-32"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12">
@@ -94,7 +93,7 @@ const ExploreProjects = () => {
                   className="w-full h-full object-cover group-hover:scale-[1.05] transition-transform duration-[2000ms] ease-out"
                 />
                 <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
-                  <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center backdrop-blur-sm">
+                  <div className="w-12 h-12 bg-[#E85244] rounded-full flex items-center justify-center backdrop-blur-sm">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
@@ -105,7 +104,7 @@ const ExploreProjects = () => {
                 <p className="font-['Times_New_Roman',serif] text-lg sm:text-xl md:text-2xl lg:text-3xl font-light text-gray-800 tracking-[-0.01em] uppercase">
                   {project.title}
                 </p>
-                <div className="mt-3 sm:mt-4 h-px w-0 bg-red-600 group-hover:w-full transition-all duration-700 ease-out"></div>
+                <div className="mt-3 sm:mt-4 h-px w-0 bg-[#E85244] group-hover:w-full transition-all duration-700 ease-out"></div>
               </div>
             </div>
           ))}

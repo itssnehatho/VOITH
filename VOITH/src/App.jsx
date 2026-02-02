@@ -8,34 +8,53 @@ import Toyota from './pages/Toyota';
 import VaidyaEnergy from './pages/VaidyaEnergy';
 import Pitstop from './pages/Pitstop';
 import Sasvata from './pages/Sasvata';
+import AdminPanel from './pages/AdminPanel';
+
+const PAGE_MAP = {
+  '#admin': 'admin',
+  '#about': 'about',
+  '#contact': 'contact',
+  '#work': 'work',
+  '#gallery': 'gallery',
+  '#toyota': 'toyota',
+  '#vaidya': 'vaidya',
+  '#pitstop': 'pitstop',
+  '#sasvata': 'sasvata'
+};
+
+function getPageFromUrl() {
+  const hash = (window.location.hash || '').toLowerCase();
+  if (PAGE_MAP[hash]) return PAGE_MAP[hash];
+  const path = (window.location.pathname || '').toLowerCase().replace(/\/$/, '');
+  if (path === '/admin') return 'admin';
+  return 'home';
+}
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('home');
+  const [currentPage, setCurrentPage] = useState(getPageFromUrl);
 
   useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash;
-      const pageMap = {
-        '#about': 'about',
-        '#contact': 'contact',
-        '#work': 'work',
-        '#gallery': 'gallery',
-        '#toyota': 'toyota',
-        '#vaidya': 'vaidya',
-        '#pitstop': 'pitstop',
-        '#sasvata': 'sasvata'
-      };
-      setCurrentPage(pageMap[hash] || 'home');
+    const handleRouteChange = () => {
+      setCurrentPage(getPageFromUrl());
     };
 
-    handleHashChange();
-    window.addEventListener('hashchange', handleHashChange);
+    handleRouteChange();
+    window.addEventListener('hashchange', handleRouteChange);
+    window.addEventListener('popstate', handleRouteChange);
 
-    return () => window.removeEventListener('hashchange', handleHashChange);
+    return () => {
+      window.removeEventListener('hashchange', handleRouteChange);
+      window.removeEventListener('popstate', handleRouteChange);
+    };
   }, []);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  }, [currentPage]);
 
   const renderPage = () => {
     switch (currentPage) {
+      case 'admin': return <AdminPanel />;
       case 'about': return <AboutPage />;
       case 'contact': return <ContactPage />;
       case 'work': return <OurWorkPage />;

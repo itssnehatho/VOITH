@@ -32,15 +32,12 @@ const AboutUsImage = () => {
         };
         window.addEventListener('resize', updateMeasurements);
 
-        const totalScrollDistance = (images.length + 1) * window.innerHeight;
         const slidePhaseEnd = 0.15;
 
         ScrollTrigger.create({
           trigger: sectionRef.current,
           start: 'top top',
-          end: `+=${totalScrollDistance}`,
-          pin: true,
-          pinSpacing: true,
+          end: 'bottom top',
           scrub: 2,
           onUpdate: (self) => {
             const progress = self.progress;
@@ -87,7 +84,7 @@ const AboutUsImage = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full relative">
+    <section ref={sectionRef} className="w-full relative md:min-h-[400vh]">
       {/* Mobile */}
       <div className="md:hidden">
         {images.map((image, index) => (
@@ -95,7 +92,7 @@ const AboutUsImage = () => {
             <div className="relative w-full h-[60vh] overflow-hidden">
               <img src={image} alt={`VOITH project ${index + 1}`} className="w-full h-full object-cover" />
             </div>
-            <div className="px-4 sm:px-6 py-8" style={{ backgroundColor: '#FAF5ED' }}>
+            <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8" style={{ backgroundColor: '#FFFBF5' }}>
               <h3 className="text-xs sm:text-sm font-light text-gray-500 flex items-center gap-2 tracking-[0.2em] uppercase mb-4">
                 <span className="w-1.5 h-1.5 bg-gray-400 rounded-full inline-block"></span>
                 FEATURED COMPANY
@@ -110,21 +107,20 @@ const AboutUsImage = () => {
               <p className="text-gray-600 text-sm leading-relaxed mb-4 text-justify">
                 Toyota Nepal, represented by United Traders Syndicate (UTS), is the official distributor of Toyota vehicles, parts, and services in Nepal. With over five decades of presence, Toyota Nepal offers a wide range of reliable cars, SUVs, pickups, and MPVs, along with comprehensive after-sales support through its showrooms and service centers.
               </p>
-              <button className="group border border-gray-900 text-gray-900 bg-transparent px-8 py-3 text-xs tracking-[0.15em] uppercase rounded-full hover:bg-red-600 hover:border-red-600 hover:text-white transition-all duration-300 relative overflow-hidden">
-                <span className="relative z-10">VIEW PROJECTS</span>
-                <span className="absolute inset-0 bg-red-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left rounded-full"></span>
+              <button className="group border border-gray-900 text-gray-900 bg-transparent px-8 py-3 text-xs tracking-[0.15em] uppercase rounded-full hover:bg-[#E85244] hover:border-[#E85244] hover:text-white transition-colors duration-100 relative overflow-hidden">
+                <span className="relative z-10 group-hover:text-white transition-colors duration-100">VIEW PROJECTS</span>
+                <span className="absolute inset-0 z-0 bg-[#E85244] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left rounded-full"></span>
               </button>
             </div>
           </div>
         ))}
       </div>
 
-      {/* Desktop */}
-      <div ref={wrapperRef} className="hidden md:block relative w-full h-screen overflow-hidden">
+      <div ref={wrapperRef} className="hidden md:block md:sticky md:top-0 relative w-full h-screen overflow-hidden">
             <div
               ref={textPanelRef}
               className="absolute left-0 top-0 w-1/2 h-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-10 md:py-12 lg:py-16 flex flex-col justify-between"
-              style={{ backgroundColor: '#FAF5ED', opacity: 0 }}
+              style={{ backgroundColor: '#FFFBF5', opacity: 0 }}
             >
               <div>
                 <h3 className="text-xs sm:text-sm font-light text-gray-500 flex items-center gap-2 tracking-[0.2em] uppercase mb-8 sm:mb-10 md:mb-12">
@@ -143,9 +139,9 @@ const AboutUsImage = () => {
                 <p className="text-sm sm:text-base md:text-lg text-gray-700 font-light leading-[1.85] tracking-[-0.01em] mb-8 sm:mb-10 text-justify">
                   Toyota Nepal, represented by United Traders Syndicate (UTS), is the official distributor of Toyota vehicles, parts, and services in Nepal. With over five decades of presence, Toyota Nepal offers a wide range of reliable cars, SUVs, pickups, and MPVs, along with comprehensive after-sales support through its showrooms and service centers.
                 </p>
-                <button className="group border border-gray-900 text-gray-900 bg-transparent px-8 sm:px-10 py-3 sm:py-3.5 text-xs sm:text-sm font-light tracking-[0.15em] uppercase rounded-full hover:bg-red-600 hover:border-red-600 hover:text-white transition-all duration-300 relative overflow-hidden">
-                  <span className="relative z-10">VIEW PROJECTS</span>
-                  <span className="absolute inset-0 bg-red-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left rounded-full"></span>
+                <button className="group border border-gray-900 text-gray-900 bg-transparent px-8 sm:px-10 py-3 sm:py-3.5 text-xs sm:text-sm font-light tracking-[0.15em] uppercase rounded-full hover:bg-[#E85244] hover:border-[#E85244] hover:text-white transition-colors duration-100 relative overflow-hidden">
+                  <span className="relative z-10 group-hover:text-white transition-colors duration-100">VIEW PROJECTS</span>
+                  <span className="absolute inset-0 z-0 bg-[#E85244] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left rounded-full"></span>
                 </button>
               </div>
             </div>

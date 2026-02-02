@@ -58,7 +58,7 @@ const GalleryPage = () => {
   }, [curtainUp]);
 
   return (
-    <div className="page-root min-h-screen bg-[#FAF5ED] relative overflow-anchor-none">
+    <div className="page-root min-h-screen bg-[#FFFBF5] relative overflow-anchor-none">
       <div className="relative overflow-anchor-none">
         <Header />
 
@@ -74,7 +74,7 @@ const GalleryPage = () => {
               >
                 GALLERY
               </h1>
-              <div className="h-px w-20 bg-gradient-to-r from-red-600 to-transparent mt-4"></div>
+              <div className="h-px w-20 bg-gradient-to-r from-[#E85244] to-transparent mt-4"></div>
             </div>
           </div>
         </section>
@@ -104,7 +104,7 @@ const GalleryPage = () => {
                       <p className="font-['Times_New_Roman',serif] text-sm sm:text-base md:text-lg uppercase font-light text-center tracking-tight mb-2">
                         VIEW MEDIA
                       </p>
-                      <div className="h-0.5 w-6 mx-auto bg-red-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center"></div>
+                      <div className="h-0.5 w-6 mx-auto bg-[#E85244] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center"></div>
                     </div>
                   </div>
                 );
@@ -132,7 +132,7 @@ const GalleryPage = () => {
                           <p className="font-['Times_New_Roman',serif] text-sm sm:text-base md:text-lg uppercase font-light text-center tracking-tight mb-2">
                             VIEW MEDIA
                           </p>
-                          <div className="h-0.5 w-6 mx-auto bg-red-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center"></div>
+                          <div className="h-0.5 w-6 mx-auto bg-[#E85244] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center"></div>
                         </div>
                       </div>
                     );
@@ -148,7 +148,7 @@ const GalleryPage = () => {
 
       {/* Curtain  */}
       <div
-        className={`fixed inset-0 bg-white z-[9999] pointer-events-none transition-all duration-[1000ms] ease-out flex flex-col items-center justify-center ${
+        className={`fixed inset-0 bg-[#FFFBF5] z-[9999] pointer-events-none transition-all duration-[1000ms] ease-out flex flex-col items-center justify-center ${
           curtainUp ? '-translate-y-full' : 'translate-y-0'
         }`}
       >

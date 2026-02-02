@@ -6,17 +6,17 @@ const VaidyaEnergy = () => {
     };
 
     return (
-        <div className="page-root min-h-screen bg-[#FAF5ED] overflow-anchor-none">
+        <div className="page-root min-h-screen bg-[#FFFBF5] overflow-anchor-none">
         <section className="featured-in flex flex-col md:flex-row w-full min-h-screen relative">
             <button
                 onClick={goHome}
-                className="absolute top-4 right-4 text-white font-bold text-2xl flex items-center justify-center hover:text-red-600 transition-colors duration-300 z-20"
+                className="absolute top-4 right-4 text-white font-bold text-2xl flex items-center justify-center hover:text-[#E85244] transition-colors duration-300 z-20"
                 aria-label="Close"
             >
                 ×
             </button>
 
-            <div className="text-section md:w-1/2 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-10 md:py-12 lg:py-16 flex flex-col justify-between bg-[#FFF9F0] z-10 relative">
+            <div className="text-section md:w-1/2 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-8 sm:py-10 md:py-12 lg:py-16 flex flex-col justify-between bg-[#FFFBF5] z-10 relative">
                 <div>
                     <h3 className="text-xs sm:text-sm font-light text-gray-500 flex items-center gap-2 tracking-[0.2em] uppercase mb-8 sm:mb-10 md:mb-12">
                         <span className="w-1.5 h-1.5 bg-gray-400 rounded-full inline-block"></span>
@@ -38,9 +38,9 @@ const VaidyaEnergy = () => {
                         Ather Nepal brings Ather Energy's smart, high-performance electric scooters to Nepal, offering advanced battery technology, fast charging, and a premium riding experience. The brand focuses on sustainable mobility, strong after-sales support, and building a reliable charging ecosystem to accelerate Nepal's shift toward clean electric transportation.
                     </p>
 
-                    <button className="group border border-gray-900 text-gray-900 bg-transparent px-8 sm:px-10 py-3 sm:py-3.5 text-xs sm:text-sm font-light tracking-[0.15em] uppercase rounded-full hover:bg-red-600 hover:border-red-600 hover:text-white transition-all duration-300 relative overflow-hidden">
-                        <span className="relative z-10">VIEW PROJECTS</span>
-                        <span className="absolute inset-0 bg-red-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left rounded-full"></span>
+                    <button className="group border border-gray-900 text-gray-900 bg-transparent px-8 sm:px-10 py-3 sm:py-3.5 text-xs sm:text-sm font-light tracking-[0.15em] uppercase rounded-full hover:bg-[#E85244] hover:border-[#E85244] hover:text-white transition-colors duration-100 relative overflow-hidden">
+                        <span className="relative z-10 group-hover:text-white transition-colors duration-100">VIEW PROJECTS</span>
+                        <span className="absolute inset-0 z-0 bg-[#E85244] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out origin-left rounded-full"></span>
                     </button>
                 </div>
             </div>

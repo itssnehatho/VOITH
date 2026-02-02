@@ -1,12 +1,16 @@
 import { useState, useEffect } from 'react';
+import { useContent } from '../context/ContentContext';
 import { NAVIGATION_ITEMS } from '../constants';
 
 const Header = () => {
+  const { content } = useContent();
+  const navItems = Array.isArray(content?.navItems) && content.navItems.length > 0 ? content.navItems : NAVIGATION_ITEMS;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDesktopMenuOpen, setIsDesktopMenuOpen] = useState(false);
   const [projectsOverlayVisible, setProjectsOverlayVisible] = useState(false);
   const [isWorkPage, setIsWorkPage] = useState(false);
   const [isGalleryPage, setIsGalleryPage] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const projects = [
     { 
@@ -40,6 +44,16 @@ const Header = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const pastHero = window.scrollY >= window.innerHeight * 0.85;
+      setIsScrolled(pastHero);
+    };
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -57,7 +71,6 @@ const Header = () => {
     setProjectsOverlayVisible(false);
   };
 
-  // When desktop projects overlay opens, trigger a slow slide-up animation (same feel as titles)
   useEffect(() => {
     if (isDesktopMenuOpen) {
       const t = setTimeout(() => setProjectsOverlayVisible(true), 200);
@@ -66,12 +79,18 @@ const Header = () => {
     return undefined;
   }, [isDesktopMenuOpen]);
 
-  const textColorClass = (isWorkPage || isGalleryPage) ? 'text-gray-800' : 'text-white';
-  const iconColorClass = (isWorkPage || isGalleryPage) ? 'text-gray-800' : 'text-white';
+  const useSolidNav = isScrolled || isWorkPage || isGalleryPage;
+  const useLightText = !useSolidNav;
+  const textColorClass = useLightText ? 'text-white' : 'text-gray-800';
+  const iconColorClass = useLightText ? 'text-white' : 'text-gray-800';
 
   return (
-    <header className="w-full bg-transparent absolute top-0 left-0 z-[70]">
-      <div className="max-w-[1440px] w-full mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 pt-6 sm:pt-7 md:pt-8 lg:pt-10 xl:pt-12 pb-3 sm:pb-3.5 md:pb-4 flex items-center justify-between">
+    <header
+      className={`w-full fixed top-0 left-0 right-0 z-[70] transition-colors duration-300 ${
+        useSolidNav ? 'bg-[#FFFBF5]' : 'bg-transparent'
+      }`}
+    >
+      <div className="max-w-[1440px] w-full mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 pt-1 sm:pt-2 md:pt-3 lg:pt-4 xl:pt-5 pb-1 sm:pb-1.5 md:pb-2 flex items-center justify-between">
         
         {/* Logo */}
         <div 
@@ -90,7 +109,7 @@ const Header = () => {
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6 lg:space-x-8 xl:space-x-10">
-          {NAVIGATION_ITEMS.map((item) => (
+          {navItems.map((item) => (
             <a 
               key={item.label}
               href={item.href}
@@ -104,7 +123,7 @@ const Header = () => {
                   }
                 }
               }}
-              className={`${textColorClass} font-semibold text-[10px] md:text-[11px] lg:text-xs hover:text-red-600 transition-colors uppercase tracking-[0.1em] leading-none relative top-[1px]`}
+              className={`${textColorClass} font-semibold text-[10px] md:text-[11px] lg:text-xs hover:text-[#E85244] transition-colors uppercase tracking-[0.1em] leading-none relative top-[1px]`}
             >
               {item.label}
             </a>
@@ -155,12 +174,11 @@ const Header = () => {
         </button>
       </div>
 
-      {/* Mobile Menu — off-white bg, padding aligned with nav */}
       {isMobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 z-40 pt-16 sm:pt-20 overflow-y-auto bg-[#FAF5ED]">
-          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 w-full pt-4 pb-8">
+        <div className="md:hidden fixed inset-0 z-40 pt-16 sm:pt-20 overflow-y-auto bg-[#FFFBF5]">
+          <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 w-full pt-4 pb-8">
             <nav className="flex flex-col space-y-4 sm:space-y-5 md:space-y-6">
-              {NAVIGATION_ITEMS.map((item) => (
+              {navItems.map((item) => (
                 <a 
                   key={item.label}
                   href={item.href}
@@ -175,7 +193,7 @@ const Header = () => {
                     }
                     closeMobileMenu();
                   }}
-                  className="text-gray-800 font-semibold text-base sm:text-lg hover:text-red-600 transition-colors uppercase tracking-[0.1em]"
+                  className="text-gray-800 font-semibold text-base sm:text-lg hover:text-[#E85244] transition-colors uppercase tracking-[0.1em]"
                 >
                   {item.label}
                 </a>
@@ -191,7 +209,7 @@ const Header = () => {
                       window.location.hash = project.href;
                       closeMobileMenu();
                     }}
-                    className="block text-gray-700 font-light text-sm sm:text-base hover:text-red-600 transition-colors uppercase tracking-[0.1em] py-1.5 sm:py-2"
+                    className="block text-gray-700 font-light text-sm sm:text-base hover:text-[#E85244] transition-colors uppercase tracking-[0.1em] py-1.5 sm:py-2"
                   >
                     {project.title}
                   </a>
@@ -206,12 +224,12 @@ const Header = () => {
       {isDesktopMenuOpen && (
         <>
           <div 
-            className="fixed inset-0 bg-[#FAF5ED]/95 z-[55] backdrop-blur-sm transition-opacity duration-500"
+            className="fixed inset-0 bg-[#FFFBF5]/95 z-[55] backdrop-blur-sm transition-opacity duration-500"
             onClick={closeDesktopMenu}
           ></div>
           <div className="fixed inset-0 z-[60] overflow-y-auto">
-            <div className="min-h-screen bg-[#FAF5ED]">
-              {/* Top bar (logo + close) */}
+            <div className="min-h-screen bg-[#FFFBF5]">
+         
               <div className="max-w-[1440px] w-full mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 pt-6 sm:pt-7 md:pt-8 lg:pt-10 xl:pt-12">
                 <div className="flex items-center justify-between">
                   <div
@@ -231,7 +249,7 @@ const Header = () => {
                   <button
                     onClick={closeDesktopMenu}
                     aria-label="Close"
-                    className="text-gray-900 hover:text-red-600 transition-colors duration-300"
+                    className="text-gray-900 hover:text-[#E85244] transition-colors duration-300"
                   >
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -240,7 +258,7 @@ const Header = () => {
                 </div>
               </div>
 
-              {/* 3 tiles */}
+         
               <div className="max-w-[1440px] w-full mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 pt-10 sm:pt-12 md:pt-14 lg:pt-16 pb-10 sm:pb-12">
                 <div className="mb-10 sm:mb-12">
                   <h2
@@ -250,7 +268,7 @@ const Header = () => {
                   >
                     COMPANIES
                   </h2>
-                  <div className="mt-3 h-px w-24 bg-gradient-to-r from-red-600 via-red-500 to-transparent" />
+                  <div className="mt-3 h-px w-24 bg-gradient-to-r from-[#E85244] via-[#E85244] to-transparent" />
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 md:gap-10 lg:gap-12">
@@ -295,9 +313,9 @@ const Header = () => {
                 <div className="mt-10 border-t border-gray-300/60"></div>
 
                 {/* Bottom nav row */}
-                <div className="mt-8 flex items-center justify-center gap-6">
-                  <div className="flex items-center gap-6">
-                    {NAVIGATION_ITEMS.map((item) => (
+                <div className="mt-10 flex items-center justify-center gap-8 sm:gap-10">
+                  <div className="flex items-center gap-8 sm:gap-10">
+                    {navItems.map((item) => (
                       <a
                         key={item.label}
                         href={item.href}
@@ -308,7 +326,7 @@ const Header = () => {
                             closeDesktopMenu();
                           }
                         }}
-                        className="text-[10px] uppercase tracking-[0.2em] text-gray-700 hover:text-red-600 transition-colors"
+                        className="text-xs sm:text-sm md:text-base uppercase tracking-[0.2em] text-gray-700 hover:text-[#E85244] transition-colors font-medium"
                       >
                         {item.label}
                       </a>
